@@ -1,0 +1,338 @@
+﻿@model SodigCiudadano.Models.Entidades.Datos
+@{
+    ViewBag.Title = "FORMULARIO DE DATOS |";
+}
+
+<style>
+    .mt-100 {
+        margin-top: 100px
+    }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+            <br />
+            <input hidden value="@ViewBag.codigoPaisEcuador" id="codigoPaisEcuador" />
+            <input hidden value="@ViewBag.codigoOtroUsoCertificado" id="codigoOtroUsoCertificado" />
+            <input hidden value="@ViewBag.codigoTelefono" id="codigoTelefono" />
+
+            @using (Html.BeginForm("DatosUsuario", "DatosUsuario", FormMethod.Post, new { onsubmit = "return validarFormulario()" }))
+            {
+                <div>
+                    @Html.HiddenFor(x => x.Solicitud.IdSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.CodigoSolicitante)
+                    @Html.HiddenFor(x => x.Solicitud.Fecha)
+                    @Html.HiddenFor(x => x.Solicitud.Identificacion)
+                    @Html.HiddenFor(x => x.Solicitud.IdEstado)
+                    @Html.HiddenFor(x => x.Solicitud.IdMotivoSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.IdTipoContenedor)
+                    @Html.HiddenFor(x => x.Solicitud.IdTipoSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.Ip)
+                    @Html.HiddenFor(x => x.Solicitud.codigoSolicitud)
+
+                    @Html.HiddenFor(x => x.Cliente.Identificacion)
+                    @Html.HiddenFor(x => x.Cliente.IdTipoElector)
+                    @Html.HiddenFor(x => x.Cliente.PrimerNombre)
+                    @Html.HiddenFor(x => x.Cliente.PrimerApellido)
+                    @Html.HiddenFor(x => x.Cliente.SegundoApellido)
+                    @Html.HiddenFor(x => x.Cliente.SegundoNombre)
+                    @Html.HiddenFor(x => x.Cliente.Actividad.IdActividad)
+                    @Html.HiddenFor(x => x.Cliente.Elector)
+
+                    @Html.HiddenFor(x => x.Cliente.IdTipoIdentificacion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdDireccion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdDireccion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdSolicitud)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdTipoContacto)
+                </div>
+                <span class="section pb-3 pl-5"><i class="far fa-file-alt"></i> Formulario de Datos Adicionales ( Los datos serán utilizados para  su Factura)</span>
+                <br />
+                <div class="container div-registro2">
+                    <br />
+                    <span class="section pb-3 pl-5"> <i class="fas fa-user"></i> Datos Personales</span>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>N° de Identificación </label>
+                            @Html.EditorFor(model => model.Solicitud.identificacionFactura, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
+                        </div>
+                        <div class="col-md-4">
+                            <label>Nombres y Apellidos</label>
+                            @Html.EditorFor(model => model.Solicitud.nombreFactura, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
+                        </div>
+                        <div class="col-md-4">
+                            <label>Actividad Económica</label>
+                            @Html.DropDownListFor(x => x.Cliente.Actividad.IdActividadEconomica, new SelectList(ViewBag.idActividadEconomica, "idActividadEconomica", "actividadEconomica"), "Seleccione una opción", new { @class = "form-control", @id = "idActividadEconomica" })
+                            <div class="text-danger" id="advActividadEconomica"><p></p> </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div hidden class="col-md-4 pt-3">
+                            <label>RUP</label>
+                            @Html.EditorFor(model => model.Cliente.Actividad.Rup, new { htmlAttributes = new { @class = "form-control " } })
+                        </div>
+                        <div hidden class="col-md-4 pt-3">
+                            <label>RUC</label>
+                            <label hidden style="font-size:13px; color:red;">
+                                Ingrese un ruc válido
+                            </label>
+                            @Html.EditorFor(model => model.Cliente.Actividad.Ruc, new { htmlAttributes = new { @class = "form-control " } })
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 pt-3">
+                            <label><i class="fas fa-analytics"></i> País Domicilio</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdPais, new SelectList(ViewBag.idPais, "idPais", "pais", Model.Cliente.Direcciones[0].IdPais), "Seleccione una opción", new { @class = "form-control", @id = "paisDomicilio" })
+                            <div class="text-danger" id="advIdPais"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Provincia Domicilio</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdProvincia, new SelectList(ViewBag.idProvincia, "idProvincia", "provincia", Model.Cliente.Direcciones[0].IdProvincia), "Seleccione una opción", new { @class = "form-control", @id = "provinciaDomicilio" })
+                            <div class="text-danger" id="advProvincia"><p></p> </div>
+                        </div>
+                        <div class="col-md-4 pt-3">
+                            <label>Ciudad Domicilio</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[0].IdCiudad), "Seleccione una opción", new { @class = "form-control", @id = "ciudadDomicilio", @maxlength="15" })
+                            <div class="text-danger" id="advCiudad"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Dirección Domicilio</label>
+                            @Html.EditorFor(model => model.Cliente.Direcciones[0].direccion, new { htmlAttributes = new { @class = "form-control ", @id = "direccionDomicilio", @maxlength = "30" } })
+                            <div class="text-danger" id="advDireccion"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Sector Domicilio</label>
+                            @Html.EditorFor(model => model.Cliente.Direcciones[0].Sector, new { htmlAttributes = new { @class = "form-control ", @id = "sectorDomicilio", @maxlength = "19" } })
+                            <div class="text-danger" id="advSector"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Código Postal</label>
+                            @Html.EditorFor(model => model.Cliente.Direcciones[0].codigoPostal, new { htmlAttributes = new { @class = "form-control ", @id = "codigoPostal", @maxlength = "6" } })
+                            <div class="text-danger" id="advCodigoPostal"><p></p> </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 pt-3">
+                            <label>Teléfono Domicilio</label>
+                            @Html.EditorFor(model => model.Cliente.Telefonos[0].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "telefonoDomicilio", @minLength = "10", @maxlength = "10" } })
+                            <div class="text-danger" id="advTelefonoDomicilio"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Teléfono Celular</label>
+                            @Html.EditorFor(model => model.Cliente.Telefonos[1].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "celularDomicilio", @minLength = "10", @maxlength = "10" } })
+                            <div class="text-danger" id="advCelularDomicilio"><p></p> </div>
+                        </div>
+                        <div class="col-md-4 pt-3">
+                            <label>Correo Electrónico Principal</label>
+                            <input type="text" readonly id="correoPrincipal" class="form-control" value="@ViewBag.correo" name="Cliente.Telefonos[2].Contacto" />
+                            @*@Html.EditorFor(model => model.Cliente.Telefonos[2].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "correoPrincipal" } })*@
+                            <div class="text-danger" id="advCorreoPrincipal"><p></p> </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 pt-3">
+                            <label>Correo Electrónico Alternativo</label>
+                            <input type="email" id="correoAlternativo" class="form-control" value="@ViewBag.correoAlternativo" name="Cliente.Telefonos[3].Contacto" />
+                            @*@Html.EditorFor(model => model.Cliente.Telefonos[3].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "correoAlternativo" } })*@
+                            <div class="text-danger" id="advCorreoAlternativo"><p></p> </div>
+                        </div>
+                    </div> 
+                    <br />
+                    <div class="col-md-12 pt-3" style="margin-top:10px">
+                        <br />
+                        <span class="section pb-3 pl-5">  <i class="fas fa-building"></i> Datos de Oficina</span>
+
+                        <div class="col-md-4 pt-3">
+                            <label>País Oficina</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[1].IdPais, new SelectList(ViewBag.idPais, "idPais", "pais", Model.Cliente.Direcciones[1].IdPais), "Seleccione una opción", new { @class = "form-control", @id = "paisOficina" })
+                            <div class="text-danger" id="advPaisOficina"><p></p> </div>
+                        </div>
+
+
+                        <div class="col-md-4 pt-3">
+                            <label>Provincia Oficina</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[1].IdProvincia, new SelectList(ViewBag.idProvincia, "idProvincia", "provincia", Model.Cliente.Direcciones[1].IdProvincia), "Seleccione una opción", new { @class = "form-control", @id = "provinciaOficina" })
+                            <div class="text-danger" id="advProvinciaOficina"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Ciudad Oficina</label>
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[1].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[1].IdCiudad), "Seleccione una opción", new { @class = "form-control", @id = "ciudadOficina" })
+                            <div class="text-danger" id="advCiudadOficina"><p></p> </div>
+                        </div>
+                        <div class="col-md-4 pt-3">
+                            <label>Dirección Oficina</label>
+                            @Html.EditorFor(model => model.Cliente.Direcciones[1].direccion, new { htmlAttributes = new { @class = "form-control ", @id = "direccionOficina" } })
+                            <div class="text-danger" id="advDireccionOficina"><p></p> </div>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <label>Teléfono Oficina</label>
+                            @Html.EditorFor(model => model.Cliente.Telefonos[4].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "telefonoOficina", @minLength = "9", @maxlength = "9" } })
+                            <div class="text-danger" id="advTelefonoOficina"><p></p> </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 pt-3">
+                        <br />
+                        <br />
+                        <span class="section pb-3 pl-5">  <i class="fas fa-certificate"></i> Certificado</span>
+                        @*<div class="col-md-4 pt-3">
+                                <label>Uso Certificado</label>
+                                @Html.DropDownList("IdUsoCertificado", null, "Seleccione Una Opción", htmlAttributes: new { @class = "form-control", @multiple = "multiple", @id = "IdUsoCertificado" })
+                                <div class="text-danger" id="advUsoCertificado"><p></p> </div>
+                            </div>*@
+                        <div class="col-md-4 pt-3" >
+                            <label>Uso Certificado</label>
+                            <div class="row d-flex " >
+                                <div class="col-md-12" >
+                                    @Html.DropDownList("IdUsoCertificado", null, htmlAttributes: new { @class = "form-control", @placeholder = "Seleccione una opción", @multiple = "multiple", @id = "IdUsoCertificado" })
+                                    <div class="text-danger" id="advUsoCertificado"><p></p> </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 pt-3" hidden id="panelOtro">
+                                <label>Otro Uso</label>
+                                @Html.EditorFor(model => model.Solicitud.otroUso, new { htmlAttributes = new { @class = "form-control ", @id = "otroUso" } })
+                                <div class="text-danger" id="advOtroUso"><p></p> </div>
+                                <span style="font-size:14px">
+                                    *Detalle en que se va usar la firma electrónica
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 pt-3 pb-5" style="text-align:right">
+                        <button type="button" id="btn-one" class="btn btn-success" onClick="history.back()"> <i class="fa fa-arrow-circle-left"></i> Regresar </button>
+                        <button type="submit" id="btn-one" class="btn btn-success">Aceptar <i class="fas fa-check-circle"></i></button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+
+    <script src="~/Scripts/Script/ScriptFormulario.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var multipleCancelButton = new Choices('#IdUsoCertificado', {
+                removeItemButton: true,
+                maxItemCount: 100,
+                searchResultLimit: 100,
+                renderChoiceLimit: 100
+            });
+
+        });
+        
+    </script>
+}
+
+

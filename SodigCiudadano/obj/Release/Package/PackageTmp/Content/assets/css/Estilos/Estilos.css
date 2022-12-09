@@ -1,0 +1,36 @@
+﻿.modal-static {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    margin-top: -100px;
+    margin-left: -150px;
+    overflow: visible !important;
+}
+
+    .modal-static,
+    .modal-static .modal-dialog,
+    .modal-static .modal-content {
+        width: 300px;
+        height: 120px;
+    }
+
+        .modal-static .modal-dialog,
+        .modal-static .modal-content {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+            .modal-static .modal-content .icon {
+            }
+
+.modal-text {
+    text-align: center;
+    font-family: Cambria;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.choices__input{
+    width:100%;
+    text-align:center;
+}

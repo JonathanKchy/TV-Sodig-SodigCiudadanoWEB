@@ -1,0 +1,263 @@
+﻿
+@media only screen and (max-width: 490px) {
+
+    #logohome {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .login_wrapper {
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+
+
+    .nav {
+        color: #06315f;
+    }
+
+    h1{
+        margin-top:10%;
+    }
+
+    .login_content{
+        margin-left:-20px;
+    }
+
+    .div-registro3 {
+        margin-left: 0%;
+    }
+    .campoCodigo {
+        margin-left: 0%;
+    }
+
+    #pasos{
+        width:100%;
+        margin-left:-15%;
+    }
+}
+
+
+
+@media only screen and (max-width: 330px) {
+
+    .nav li {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+
+
+    .div-registro {
+        width: 100%;
+        margin: auto;
+    }
+
+    .campos {
+        margin-left: 0;
+        display: flex;
+    }
+
+
+    #img-preca {
+        display: none;
+    }
+
+    #flotante {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    span.section {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    #frontal {
+        width: 100%;
+    }
+
+    #posterior {
+        width: 100%;
+    }
+
+    #flotanteCamara {
+        width: 100%;
+        margin-top: 15%;
+    }
+
+    #flotanteCamPost {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #alertCam {
+        margin-left: 30px;
+    }
+
+    #alertCamPost {
+        margin-left: 30px;
+    }
+
+    #panelCaptura {
+        margin-left: 0;
+    }
+
+    #panelCapturaPost {
+        margin-left: 0;
+    }
+
+    #infoCapt {
+        margin-top: -80px;
+        width: 300px;
+        margin-left: 25px;
+    }
+
+    #camara {
+        margin-top: 0px;
+    }
+
+    #btnIniciarCamara {
+        margin-left: 80px;
+    }
+    #btnIniciarCamaraPost {
+        margin-left: 80px;
+    }
+
+    #panelVideo{
+        margin-top:0px;
+    }
+
+    #CaptureFrontal{
+        margin:auto;
+    }
+
+    #panelVideoPost{
+        margin:auto;
+    }
+    #CapturePost{
+       margin:auto;
+    }
+
+  #flotantePapeleta{
+      width:100%;
+      margin-left:0%;
+  }
+    #camPost {
+        display: none;
+    }
+
+    #play{
+       margin-left:120px;
+    }
+
+    #canvasElement1{
+        margin-left:-15px;
+
+    }
+
+    video{
+        margin-top:15px;
+
+    }
+
+    .modal-dialog{
+        margin:auto;
+    }
+
+    #panelVideoGrabado{
+        margin-top:0px;
+    }
+
+    #capture1{
+        display:none;
+    }
+
+    #perfil2{
+        display:none;
+    }
+  
+    .btn-video{
+        margin-top:30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        height: 100%;
+        background: url('../images/fondomovil.png') center center fixed;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .login_content1 {
+        position: absolute;
+        margin-top: 5%;
+        padding: 0px 58px 0px 15px;
+    }
+
+    #img-preca {
+      text-align:initial;
+    }
+
+    .row{
+        margin-right:0px;
+    }
+
+  
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #imgceduFront {
+        display: none;
+    }
+
+    #imgceduPost {
+        display: none;
+    }
+
+}
+
+
+    @media only screen and (max-width: 1432px) {
+
+
+        #div-registro3 {
+            display: none;
+        }
+
+        #flotanteCamara {
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+
+        #div-btn {
+            float: inherit;
+            margin-top: 0%;
+        }
+
+        #flotante {
+            margin-left: 0;
+        }
+
+        #frontal {
+            width: 100%;
+        }
+
+        #posterior {
+            width: 100%;
+        }
+    }
+

@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar Sesión | </title>
+
+    <link href="~/Vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Vendors/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- NProgress -->
+    <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="~/Content/css/custom.min.css" rel="stylesheet" />
+    <link href="~/Content/css/EstilosLogin.css" rel="stylesheet" />
+    <link href="~/Content/css/Responsive.css" rel="stylesheet" />
+
+</head>
+<body class="fondoLogin">
+    <header>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/Menu/Ayuda">
+                    Ayuda
+                </a>
+            </li>
+            <!--<li>
+                <a href="/Menu/Blog">
+                    Blog
+                </a>
+            </li>-->
+        </ul>
+    </header>
+    <br />
+    <div id="logohome">
+        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/TufirmaEc.png" width="120px"  style="margin-left:4%"/></a> &nbsp; &nbsp;
+        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/logobce.png" width="150px" /></a>
+        <br />
+        <h1>Nos importa tu seguridad</h1>
+        <br />
+    </div>
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+        <div class="login_wrapper">
+            <div class="animate  login_form">
+                <section class="login_content1">
+
+                    @using (@Html.BeginForm("verificacionCodigo", "Auth", FormMethod.Post, new { onsubmit = "return validar()" }))
+                    {
+
+                        <p>Código de Seguridad</p>
+                        <p>Enviamos un código al correo @Session["correoUsuarioTemp"].ToString()</p>
+                        <p> El código tiene una duración de 5 minutos</p>
+                        <div>
+                            <input type="number" autocomplete="off" name="codigoOtp" class="form-control" id="codigo" style="color:black" placeholder="Código" required="" />
+                            <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                            <label id="mensajecodigo" hidden class="col-form-label  alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!. Ingrese el codigo</label>
+                        </div>
+                        <input type="text" hidden id="identificador" class="form-control" name="identificador" value="@ViewBag.identificador" />
+
+                        <div class="row pt-5">
+                            <div class="col-md-6 pt-2">
+                                <a href="@Url.Action("ReenviarCodigo", "Auth")" style="font-size:15px;"> <i class="fa fa-send"></i> Reenviar Código</a>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary btn-block" id="btn-one">Verificar</button>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-md-6  offset-sm-6 pt-3" style="text-align:right;color:blue;">
+                                <a href="@Url.Action("TicketCorreo", "Auth")"> ¿No he recibido el código OTP?</a>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <div class="separator">
+                            <div class="clearfix"></div>
+                            <br />
+                        </div>
+                    }
+
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.alert').fadeIn();
+            setTimeout(function () {
+                $(".alert").fadeOut();
+            }, 5000);
+        });
+
+        function validar() {
+
+            var codigo = $('#codigo').val();
+
+            if (codigo.trim() == "") {
+                var elemento = document.getElementById("mensajecodigo");
+                elemento.hidden = false;
+                return false;
+            }
+
+            $('#btn-one').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
+        }
+
+    </script>
+</body>
+</html>

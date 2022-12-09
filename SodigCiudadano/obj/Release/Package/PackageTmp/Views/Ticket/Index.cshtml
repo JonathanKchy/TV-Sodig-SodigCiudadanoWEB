@@ -1,0 +1,76 @@
+﻿@model SodigCiudadano.Models.Entidades.Ticket
+@{
+    ViewBag.Title = "Tickets";
+}
+
+<div class="row ">
+    <img src="~/Content/images/intentos.png" alt="" width="30%" style="margin-top:5%;">
+    <div class="col-md-8 pl-5 pr-5">
+        <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div> <br />
+        <h2 class="text-center pt-5" style="color:black">Bienvenido al Sistema de Creación de  Ticket y Atención al Cliente</h2>
+        @using (Html.BeginForm("CrearTicket", "Ticket", FormMethod.Post, new { onsubmit = "return validarFormulario()", enctype = "multipart/form-data" }))
+        {
+            <br />
+            <div class="div-registro">
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01" style="color:black"><i class="fas fa-id-card"></i>  CI/Pasaporte</label>
+                            @Html.EditorFor(model => model.identificacion, new { htmlAttributes = new { @class = "form-control  ", @id = "identificacion", @maxlength = "100" } })
+                            <div hidden class="text-danger" id="advIdentificacion"><p>Ingrese la identificación</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" style="color:black"><i class="fas fa-phone-alt"></i> Teléfono</label>
+                            @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", @id = "telefono", @type = "text", @maxlength = "10" } })
+                            <div hidden class="text-danger" id="advTelefono"><p>Ingrese el teléfono</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" style="color:black">Nombre y Apellidos</label>
+                            @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @type = "text", @class = "form-control ", @id = "nombre" } })
+                            <div hidden class="text-danger" id="advNombre"><p>Ingrese el nombre</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" style="color:black">Correo Electrónico</label>
+                            @Html.EditorFor(model => model.mail, new { htmlAttributes = new { @type = "text", @class = "form-control ", @id = "mail" } })
+                            <div hidden class="text-danger" id="advCorreo"><p>Ingrese el correo</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationDefault01" style="color:black">Detalle Ticket</label>
+                            @Html.TextAreaFor(model => model.detalle, new { @class = "form-control ", @id = "detalle", @rows = "5" })
+                            <div hidden class="text-danger" id="advDetalle"><p>Ingrese el detalle del ticket</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01" style="color:black">Tipo de Ticket</label>
+                            @Html.DropDownList("idTipo", null, "Seleccione Una Opción", htmlAttributes: new { @class = "custom-select ", @id = "idTipo" })
+                            <div hidden class="text-danger" id="advTipo"><p>Seleccione el tipo de tikect</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01" style="color:black">Subir Archivo</label>
+                            <input type="file" name="postedFile" class="form-control " id="archivo" />
+                            <div hidden class="text-danger" id="advArchivo"><p>Seleccione el archivo</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row pt-5">
+                        <div class="mb-3" style="text-align:right">
+                            <button type="submit" id="btn-one" class="btn btn-success "><i class="fas fa-plus-circle"></i> Crear Ticket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Script/scriptTickets.js"></script>
+}
+
+
+

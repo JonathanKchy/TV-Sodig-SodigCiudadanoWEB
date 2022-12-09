@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SodigCiudadano.Models.Entidades.SolicitudAprobada>
+@{
+    ViewBag.Title = "Pago";
+}
+
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">       
+        <div class="pt-2">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+
+            <span class="section pb-3 pl-5">Solicitudes Aprobadas</span>
+
+            <div class="row">
+                <div class="col-md-12 pl-5 pr-5">
+                    <table class="table table-responsive-lg">
+                        <thead style="background-color: #054966" class="text-white">
+                            <tr>
+                                <th>Identificación</th>
+                                <th>Motivo</th>
+                                <th>Tipo Contenedor</th>
+                                <th>Uso</th>
+                                <th>Tipo Solicitud</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Identificacion</td>
+                                    <td>@item.motivoSolicitud</td>
+                                    <td>@item.TipoContenedor</td>
+                                    <td>@item.usoCertificado</td>
+                                    <td>@item.TipoSolicitud</td>
+                                    <td>@item.estado</td>
+                                    <td>@item.Fecha</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-12 pl-5 pr-5">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { onsubmit = "return validar()" }))
+                    {
+                        <span class="section pb-3 text-left pl-4">¿Desea realizar otra acción?</span>
+                        <div class="field item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3  label-align">Tipo De Servicio</label>
+                            <div class="col-md-6 col-sm-6">
+                                @Html.DropDownList("idTipoSolicitud", null, "Seleccione Una Opción", htmlAttributes: new { @class = "form-control", @id = "idTipoSolicitud" })
+                            </div>
+                            <label id="mensajeTipoSolicitud" hidden class="col-form-label col-md-3 col-sm-3  alert-danger ">Seleccione el tipo de servicio</label>
+                        </div>
+                        <div class="field item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3  label-align">Tipo De Persona</label>
+                            <div class="col-md-6 col-sm-6">
+                                @Html.DropDownList("idTipoPersona", null, "Seleccione Una Opción", htmlAttributes: new { @class = "form-control", @id = "idTipoPersona" })
+                            </div>
+                            <label id="mensajeTipoPersona" hidden class="col-form-label col-md-3 col-sm-3  alert-danger ">Seleccione el tipo de persona</label>
+                         
+                        </div>
+
+                        <div class="form-group pt-3" style="text-align:right">
+                            <div class="col-md-6 offset-md-3">
+                                <button type="submit" id="btn-one" class="btn btn-success">Aceptar</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Script/ScriptTipoSolicitud.js"></script>
+}

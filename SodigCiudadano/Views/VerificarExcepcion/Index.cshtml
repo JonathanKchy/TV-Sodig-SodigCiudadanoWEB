@@ -1,0 +1,139 @@
+﻿@model IEnumerable<SodigCiudadano.Models.Entidades.TipoElector>
+@{
+    ViewBag.Title = "Verificar Excepción";
+}
+
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="done" isdone="1" rel="1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Tipo Solicitud</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="done" isdone="1" rel="2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Tipo Contenedor</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="done" isdone="1" rel="3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Tipo Documento</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no">5</span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+
+
+            @using (Html.BeginForm("Index", "VerificarExcepcion", FormMethod.Post, new { onsubmit = "return abrirModal()" }))
+            {
+                <span class="section pb-3 pl-5">Marque la casilla en caso de que corresponda a una de las opciones</span>
+                <div class="col-md-4"></div>
+                <div id="panelOpciones" class="col-md-7">
+                    @foreach (var item in Model)
+                    {
+                        <div class="field item form-group">
+                            <div class="col-md-6 col-sm-6 pt-2 mt-1" style="text-align:left">
+                                <div class="checkbox">
+                                    <label style="font-size:13px;" id="label_@item.idTipoElector">
+                                        <input name="idTipoElector" id="tipoElector_@item.idTipoElector" type="radio" value="@item.idTipoElector"> @item.tipoElector
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div hidden id="advertencia" class="field item form-group">
+                        <div class="col-md-6 col-sm-6 pt-2 mt-1" style="text-align:left">
+                            <div class="checkbox">
+                                <label style="font-size:13px; color:red;">
+                                    Para continuar, por favor, seleccione una opción.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group pt-5" style="text-align:right">
+                        <div class="col-md-6 offset-md-3">
+                            <input class="btn btn-success" type="submit" value="Continuar" />
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>
+
+<div class="myModal" id="miModal" name="miModal">
+    <div class="flex" id="flex">
+               
+            <div class="contenido-modal" style="width: 550px; height:190px;">
+                <div class="modal-Titulo flex">
+                    <h6 id="tituloModal" class="text-white pt-2">Confirmar</h6>
+                    <span class="cerrarModal" onclick="cerrarModal()" id="cerrarModal">&times;</span>
+                </div>
+                <div class="modal-Cuerpo">
+                    @using (Html.BeginForm("Index", "VerificarExcepcion", FormMethod.Post))
+                    {
+                        <h5 id="textModal" class="text-center">¿Texto Ejemplo?</h5>
+                        <input type="text" id="idTipoElector" name="idTipoElector" hidden/>
+                        <br />
+                        <div class="row" style="text-align:center">
+                            <div class="col-md-12" style="text-align:right">
+                                <input onclick="cerrarModal()" type="button" value="Cancelar" class="btn btn-primary" />
+                                <input type="submit" value="Continuar" class="btn btn-success" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        
+            
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Script/ScriptVerificarExcepcion.js"></script>
+}
+

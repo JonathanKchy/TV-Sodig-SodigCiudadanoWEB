@@ -1,0 +1,123 @@
+﻿@model SodigCiudadano.Models.Entidades.IdentificacionSolicitanteEnvio
+
+@{
+    ViewBag.Title = "Identificación del solicitante";
+}
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div>
+            <a class="hiddenanchor" id="signup"></a>
+            <a class="hiddenanchor" id="signin"></a>
+            <div class="login_wrapper" style="margin-top:2px;">
+                <div class="animate  login_form ">
+                    <div class="card">
+                        <div class="card-body">
+                            <section class="">
+                                @using (@Html.BeginForm("VerificacionCodigo", "OCR", FormMethod.Post))
+                                {
+                                    <h1 class=" pt-4 mb-1" style="color:dimgrey; font-size:20px; align-items:center">Verificación de Correo Electrónico</h1>
+                                    <p class=" pt-3 text-left pb-1" style="color:dimgrey">Se ha enviado un código de seguridad a:</p>
+                                    <p class=" text-left pb-3" style="color:dimgrey"> @Session["correoBCE"].ToString();</p>
+                                    <div>
+                                        <input type="number" autocomplete="off" name="codigoOtp" class="form-control" style="color:black" placeholder="Código" required="" id="codigoOCR" />
+                                        <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                                        <label id="mensajecodigo" hidden class="col-form-label  alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!. Ingrese el código</label>
+                                    </div>
+
+                                    <div class="row pt-5">
+                                        <div class="col-md-6 pt-2">
+                                            <a href="@Url.Action("VerificacionCodigo", "OCR")" style="color:dimgrey; font-size:15px;"> <i class="fa fa-send"></i> Reenviar Código</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" id="btn-one" class="btn  btn-block text-white" color:white">Verificar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <div class="col-md-10  offset-sm-2 pt-3" style="text-align:right">
+                                            <a href="@Url.Action("TicketCorreo", "Index")" style="color:dimgrey"> ¿No recibiste ningún código?</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <div class="separator">
+                                        <div class="clearfix"></div>
+                                        <br />
+                                    </div>
+                                }
+
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        function validar()
+        {
+         var codigo = $('#codigoOCR').val();
+            if (codigo.trim() == "") {
+            var elemento = document.getElementById("mensajecodigo");
+                elemento.hidden = false;
+            return false;
+         }
+               $('#btn-one').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
+        }
+    </script>
+}
+

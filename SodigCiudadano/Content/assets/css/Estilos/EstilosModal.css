@@ -1,0 +1,66 @@
+﻿.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myModal {
+    display: none;
+    position: fixed;
+    padding-right: 190px;
+    overflow: auto;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1,1,1,1);
+    padding: 18px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+.contenido-modal {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 1100px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
+    animation-name: modal;
+    animation-duration: 0.7s;
+}
+@keyframes modal {
+    from{top:-330px; opacity:0}
+    to{top:0; opacity:1}
+}
+
+.cerrarModal {
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cerrarModal:hover {
+    color: #7f8c8d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-Titulo, .modal-Pie {
+    padding: 8px 16px;
+    background: #1a232d;
+    color: #ff0000;
+    height: 30px;
+    font-size: 12px;
+}
+
+p {
+    text-align: justify;
+}
+
+.modal-Cuerpo {
+    padding: 20px 16px;
+    height: 530px;
+}

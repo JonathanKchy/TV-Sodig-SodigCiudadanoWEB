@@ -1,0 +1,663 @@
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x64\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x64\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x64\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x64\opencv_videoio_ffmpeg411_64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x64\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x86\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x86\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x86\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x86\opencv_videoio_ffmpeg411.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\x86\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.dll.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.AppContext.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Console.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.Compression.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Net.Http.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\VBCSCompiler.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Antlr3.Runtime.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.UI.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.World.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Flash.Mvc5.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Newtonsoft.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Formatting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Helpers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Mvc.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Optimization.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\WebGrease.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\ZedGraph.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.UI.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.World.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Formatting.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Helpers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Mvc.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Optimization.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Newtonsoft.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Antlr3.Runtime.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\ZedGraph.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\de\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\es\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\fr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\hu\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\it\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\ja\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\pt\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\ru\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\sk\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\sv\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\tr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\zh-cn\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\zh-tw\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csprojAssemblyReference.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CoreCompileInputs.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CopyComplete
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\IronPdf.Assets.Rendering.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\IronPdf.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\IronPdf.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\RestSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Buffers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Memory.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Numerics.Vectors.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.AccessControl.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.Permissions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.Principal.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Text.Encodings.Web.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Text.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\RestSharp.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Buffers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Memory.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Numerics.Vectors.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.AccessControl.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.Permissions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Security.Principal.Windows.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Text.Encodings.Web.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Text.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\bin\System.ValueTuple.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.App.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x64\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x64\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x64\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x64\opencv_videoio_ffmpeg411_64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x64\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x86\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x86\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x86\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x86\opencv_videoio_ffmpeg411.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\x86\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\SodigCiudadano.dll.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\SodigCiudadano.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csi.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csi.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\csi.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.AppContext.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Console.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.IO.Compression.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Net.Http.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\vbc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\vbc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\vbc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\VBCSCompiler.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Antlr3.Runtime.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Emgu.CV.UI.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Emgu.CV.World.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Flash.Mvc5.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\IronPdf.Assets.Rendering.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\IronPdf.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Newtonsoft.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\RestSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Buffers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Drawing.Common.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Memory.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Formatting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Numerics.Vectors.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.AccessControl.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.Permissions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.Principal.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Text.Encodings.Web.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Text.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Helpers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Mvc.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Optimization.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\WebGrease.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\ZedGraph.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Emgu.CV.UI.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Emgu.CV.World.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\IronPdf.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Newtonsoft.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\RestSharp.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Buffers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Memory.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Formatting.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Net.Http.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Numerics.Vectors.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.AccessControl.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.Permissions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Security.Principal.Windows.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Text.Encodings.Web.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Text.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.ValueTuple.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Helpers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Mvc.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Optimization.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\System.Web.WebPages.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Antlr3.Runtime.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\ZedGraph.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\de\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\es\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\fr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\hu\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\it\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\ja\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\pt\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\ru\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\sk\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\sv\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\tr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\zh-cn\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\bin\zh-tw\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.csproj.App.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.csprojAssemblyReference.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CoreCompileInputs.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CopyComplete
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano - Copy\SodigCiudadano\obj\Release\SodigCiudadano.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x64\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x64\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x64\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x64\opencv_videoio_ffmpeg411_64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x64\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x86\concrt140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x86\cvextern.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x86\msvcp140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x86\opencv_videoio_ffmpeg411.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\x86\vcruntime140.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\SodigCiudadano.dll.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\SodigCiudadano.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csi.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csi.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\csi.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.AppContext.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Console.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.IO.Compression.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Net.Http.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\vbc.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\vbc.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\vbc.rsp
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\VBCSCompiler.exe
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Antlr3.Runtime.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Emgu.CV.UI.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Emgu.CV.World.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Flash.Mvc5.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\IronPdf.Assets.Rendering.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\IronPdf.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Newtonsoft.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\RestSharp.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Buffers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Drawing.Common.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Memory.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Formatting.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Primitives.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Numerics.Vectors.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.AccessControl.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.Permissions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.Principal.Windows.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Text.Encodings.Web.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Text.Json.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.ValueTuple.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Helpers.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Mvc.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Optimization.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.Razor.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\WebGrease.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\ZedGraph.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Emgu.CV.UI.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Emgu.CV.World.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\IronPdf.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Newtonsoft.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\RestSharp.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Buffers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Memory.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Formatting.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Net.Http.Primitives.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Numerics.Vectors.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.AccessControl.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.Permissions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Security.Principal.Windows.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Text.Encodings.Web.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Text.Json.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.ValueTuple.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Helpers.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Mvc.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Optimization.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\System.Web.WebPages.Razor.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Antlr3.Runtime.pdb
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\ZedGraph.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\de\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\es\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\fr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\hu\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\it\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\ja\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\pt\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\ru\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\sk\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\sv\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\tr\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\zh-cn\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\bin\zh-tw\ZedGraph.resources.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.csproj.App.config
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.csprojAssemblyReference.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CoreCompileInputs.cache
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CopyComplete
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.dll
+C:\Users\Danny Aguirre\Documents\Projects\Sodig Projects\SodigCiudadano ultima Version\SodigCiudadano\obj\Release\SodigCiudadano.pdb
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x64\concrt140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x64\cvextern.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x64\msvcp140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x64\opencv_videoio_ffmpeg411_64.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x64\vcruntime140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x86\concrt140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x86\cvextern.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x86\msvcp140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x86\opencv_videoio_ffmpeg411.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\x86\vcruntime140.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.dll.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\SodigCiudadano.pdb
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.exe
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.exe.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csc.rsp
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.exe
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.exe.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\csi.rsp
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Managed.Core.targets
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.AppContext.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Collections.Immutable.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Console.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Globalization.Calendars.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.Compression.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.FileSystem.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Net.Http.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Net.Sockets.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Reflection.Metadata.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.ValueTuple.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XmlDocument.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XPath.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.exe
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.exe.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\vbc.rsp
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\VBCSCompiler.exe
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\roslyn\VBCSCompiler.exe.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Antlr3.Runtime.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.UI.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.World.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Flash.Mvc5.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\IronPdf.Assets.Rendering.Windows.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\IronPdf.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Primitives.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Web.Infrastructure.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Newtonsoft.Json.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\RestSharp.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Buffers.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Configuration.ConfigurationManager.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Drawing.Common.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Memory.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Extensions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Formatting.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Primitives.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Numerics.Vectors.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.AccessControl.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.Permissions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.Principal.Windows.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Text.Encodings.Web.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Text.Json.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Threading.Tasks.Extensions.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.ValueTuple.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Helpers.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Mvc.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Optimization.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Razor.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Deployment.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Razor.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\WebGrease.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\ZedGraph.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.UI.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Emgu.CV.World.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\IronPdf.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.FileExtensions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Configuration.Json.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileProviders.Physical.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.Extensions.Primitives.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Newtonsoft.Json.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\RestSharp.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Buffers.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Configuration.ConfigurationManager.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Memory.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Extensions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Formatting.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Net.Http.Primitives.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Numerics.Vectors.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.AccessControl.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.Permissions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Security.Principal.Windows.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Text.Encodings.Web.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Text.Json.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Threading.Tasks.Extensions.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.ValueTuple.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Helpers.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Mvc.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Optimization.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.Razor.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Deployment.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\System.Web.WebPages.Razor.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Antlr3.Runtime.pdb
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\ZedGraph.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\de\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\es\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\fr\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\hu\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\it\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\ja\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\pt\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\ru\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\sk\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\sv\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\tr\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\zh-cn\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\bin\zh-tw\ZedGraph.resources.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.App.config
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.AssemblyReference.cache
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CoreCompileInputs.cache
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.csproj.CopyComplete
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.dll
+E:\CV\SodigCiudadano\SodigCiudadano\SodigCiudadano\SodigCiudadano\obj\Release\SodigCiudadano.pdb

@@ -1,0 +1,275 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar Sesión | Facturación Electrónica </title>
+
+    <link href="~/Vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Vendors/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- NProgress -->
+    <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+
+    <link href="~/Content/css/custom.min.css" rel="stylesheet" />
+    <link href="~/Content/css/EstilosLogin.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/Estilos/EstilosModal.css" rel="stylesheet" />
+    <link href="~/Content/css/Responsive.css" rel="stylesheet" />
+    <!--Script -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../Content/js/main.js"></script>
+    
+
+</head>
+<body class="fondoLogin">
+    <header>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/Menu/Ayuda">
+                    Ayuda
+                </a>
+            </li>
+            <!--<li>
+                <a href="/Menu/Blog">
+                    Blog
+                </a>
+            </li>-->
+        </ul>
+    </header>
+    <div id="logohome">
+        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/TuFirmaEc.png" width="80px" style="margin-left:4%" /></a> &nbsp; &nbsp;
+        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/logobce.png" width="150px" /></a>
+        <!--<h1>BIENVENIDO </h1>-->
+
+        <div class="msm">@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+    </div>
+    <div>
+        <div class="col-md-6 offset-sm-2 pt-5 mt-5">
+            <label style="color:black; font-size:16px; font:bold"></label>
+        </div>
+
+        <div class="col-md-6 offset-sm-2 pt-2 pl-4">
+            <label style="color:black; font-size:16px; "></label><br />
+            <label style="color:black; font-size:16px"></label>
+        </div>
+
+        <div class="login_wrapper">
+            <div class="animate  login_form">
+
+                <section class="login_content">
+                    <h2>¡BIENVENIDO!  </h2>
+                    <h3>Para iniciar su proceso ingrese sus datos.</h3>
+                    @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { onsubmit = "return validar()" }))
+                    {
+
+                        <div>
+                            <input type="text" id="identificacion" maxlength="15" name="identificacion" autocomplete="off" class="form-control" style="color:black" placeholder="Identificación" />
+                            <div class="text-danger" style="text-align:left">
+                                <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="correo" autocomplete="off" class="form-control" style="color:black" placeholder="Correo electrónico" />
+                            <span class="message success">Correo electrónico válido!</span>
+                            <span class="message error">Correo electrónico inválido!</span>
+                            <div class="text-danger" style="text-align:left">
+                                <label hidden id="mensajeCorreo"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" id="email2" name="email2" autocomplete="off" class="form-control" style="color:black" placeholder="Confirmar correo electrónico" onkeyup="habilitar()" />
+                            <div class="text-danger" style="text-align:left">
+                                <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="g-recaptcha col-md-12" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
+                        </div>
+                        <div class="text-danger" style="text-align:center">
+                            <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
+                        </div>
+                        <div class="col-md-12 pt-2 mt-1">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-danger" style="text-align:center">
+                            <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
+                        </div>
+                        <div>
+                            <br />
+                            <div class="col-md-12" style="margin-top:5%;">
+                                <button type="submit" id="btn-one" class="boton btn  btn-block">Iniciar Sesión</button>
+                            </div>
+                        </div>
+
+
+                    }
+
+                </section>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 offset-sm-2 pb-4 mt-5 pt-4  pl-4">
+            <br />
+        </div>
+        <div class="col-md-6 offset-sm-2 pb-5 mt-5 pt-5 mb-5 pl-4">
+            <br />
+        </div>
+        <div class="col-md-6 offset-sm-2 pt-5 mb-5">
+            <a href="~/Content/video/politica.pdf" download="politicas" target="_blank" style="color:blue; font-size:16px; ">Políticas de Seguridad</a><br />
+
+        </div>
+    </div>
+  
+    <div class="myModal" hidden id="miModal" name="miModal">
+        <div class="flex" id="flex">
+            <div class="contenido-modal" style="width: 800px; height:550px;">
+                <div class="modal-Titulo flex">
+                    <h6 id="tituloModal" class="text-white pt-2">Términos y condiciones</h6>
+                    @*<span class="cerrarModal" onclick="cerrarModal()" id="cerrarModal">&times;</span>*@
+                </div>
+                <div class="modal-Cuerpo">
+                    <div style="display:block; position:relative; height: 430px; overflow:auto">
+                        <div class="container pr-2">
+                            <h6><strong>TÉRMINOS Y CONDICIONES DEL SERVICIO DE AUTORIDAD DE REGISTRO PARA LA EMISIÓN DE FIRMAS ELECTRÓNICAS</strong></h6>
+                            <h6><strong>INFORMACIÓN Y ANTECEDENTES DE ECIBCE ECUADOR</strong></h6>
+                            <p>
+                                Banco Central del Ecuador es una entidad acreditada en el Registro Público Nacional
+                                de Entidades de Certificación de Información y Servicios Relacionados, mediante la
+                                resolución ARCOTEL-2018-0902 del 5 de noviembre de 2018. La Entidad de
+                                Certificación de Información del Banco Central del Ecuador, en adelante ECIBCE, fue
+                                inscrita el día 30 de octubre de 2018 en el Registro Público Nacional de Entidades de
+                                Certificación de Información y Servicios Relacionados en el ACTA 1 PÁGINA 6.
+                                La Entidad de Certificación de Información del Banco Central del Ecuador, como
+                                prestadora de servicios de certificación electrónica, se encuentra regulada por la Ley
+                                67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos del 27 de febrero de
+                                2002, y en el ámbito de su infraestructura de clave pública, conforme a lo estipulado en
+                                su Declaración de Prácticas de Certificación (en adelante, DPC), y sus Políticas de
+                                Certificación para Certificados de Firma electrónica (en adelante, PCs).
+                                Que la DPC de la ECIBCE reconoce expresamente la posibilidad de que esta Autoridad
+                                de Certificación puede valerse de la colaboración de terceras personas, físicas o
+                                jurídicas. Esta colaboración se restringe exclusivamente a la ayuda en labores
+                                administrativas, en ningún caso intervienen en la prestación de servicios de certificación,
+                                ni proporcionan ni administran ninguno de los servicios ofrecidos por ECIBCE.
+                                Básicamente, su función es la de colaborar en procesos de identificación de personas,
+                                tramitación de solicitudes, desmaterialización de documentos, soporte informativo e
+                                intermediación en la suscripción de contratos de prestación de servicios. Y aunque
+                                hacen entrega de instrumentos de firma electrónica, estos dispositivos no se encuentran
+                                ni activados ni incorporan claves de usuario. Este documento, la DPC y su adenda
+                                detallan pormenorizadamente las funciones que se llevan a cabo por estas entidades
+                                colaboradoras.
+                                Que en el ámbito de la Infraestructura de Clave Pública de la ECIBCE (en adelante,
+                                PKI), estas entidades colaboradoras son calificadas como Terceros Vinculados a la
+                                ECIBCE (en adelante, TV).
+                                Que, con el fin de facilitar los trámites de solicitud de certificados, dotar de una atención
+                                personalizada y próxima al lugar de residencia de los usuarios de la ECIBCE, es de
+                                interés de esta Autoridad de Certificación contar con una red de alta capilaridad de TVs
+                                para la gestión presencial o en línea de sus servicios.
+                                <br /><strong>INFORMACIÓN Y ANTECEDENTES DE SODIG S.A.</strong><br />
+                                SODIG S.A. es una Autoridad de Registro Reconocida por ECIBCE y registrada como
+                                tercero vinculado de ECIBCE en la ARCOTEL.
+                                <br /><strong> DECLARACIÓN Y CONOCIMIENTO DEL SERVICIO Y CONDICIONES PRESTADAS POR TUFIRMAEC.COM </strong><br />
+                                Declaro que he leído y conozco acerca de ECIBCE y SODIG S.A.
+                                Declaro que he leído, conozco y acepto en el ámbito de mis derechos y obligaciones los
+                                siguientes documentos e información:
+                                La Ley 67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos con especial
+                                atención en lo descrito en los artículos 13, 14, 15, 16 y 17 y su reglamento con especial
+                                atención en el artículo 19
+                                La DPC y las PCs que son documentos públicos de la ECIBCE y están disponibles en
+                                las URLs:
+                                https://eci.bce.ec/marco-normativo/
+                                Toda la información, explicaciones, precios y documentación la cual ha sido
+                                proporcionada de forma clara y por esta razón ha sido elegida por mi propia voluntad
+                                según lo indica el portal web www.tufirmaec.com de propiedad de la empresa SODIG
+                                S.A.
+                                Además, declaro que toda la información, datos y documentos que he cargado es veraz,
+                                exacta y cumple con los requisitos establecidos en el portal web: www.tufirmaec.com y
+                                en aplicación del principio de buena fe contenido en el artículo 1562 del Código Civil
+                                ecuatoriano.
+                                De igual manera declaro que toda la documentación cargada en línea es de mi exclusiva
+                                responsabilidad y en caso de comprobarse que la documentación presentada no se
+                                ajusta a la verdad, el trámite podrá ser rechazada(según lo indica la PC de la ECiBCE
+                                en el numeral 8.3.1), archivado y notificado a la entidad de control ARCOTEL según e
+                                incluso, en caso de que la comprobación fuese luego de la emisión, el certificado de
+                                firma electrónica emitido carecerá de validez alguna, de conformidad con lo establecido
+                                en el artículo 18, artículo 19 - literal d, en el artículo 25 - literales b y c y en el artículo 34
+                                de la Ley 67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos, sin perjuicio
+                                de las acciones legales incluyendo las de carácter penal a que hubiere lugar.
+                                <br /><strong>AUTORIZACIONES</strong><br />
+                                Bajo mi total y pleno conocimiento y propia voluntad declaro y reitero las siguientes
+                                autorizaciones:
+                                Autorizo de forma expresa a SODIG S.A. a efectuar averiguaciones para comprobar u
+                                obtener aclaraciones e información adicional sobre el trámite de emisión de la firma
+                                electrónica solicitada en el portal web www.tufirmaec.com
+                                Autorizo a SODIG S.A., tercero vinculado de ECIBCE a que gestione ante la ECIBCE,
+                                la emisión, renovación, recuperación de contraseña o revocación de la firma electrónica
+                                a mi nombre.
+                                Autorizo a SODIG S.A., tercero vinculado de ECIBCE para que gestione la recuperación
+                                de clave de la firma electrónica a mi nombre, en caso de pérdida u olvido, previa
+                                solicitud.
+
+                                Autorizo a ECIBCE la emisión de la firma electrónica a mi nombre.
+                                Consentimiento de uso de datos personales Usuario final:
+                                De conformidad al artículo 7 literal a); y, artículo 8 de la Ley Orgánica de Protección de
+                                Datos Personales, en mi calidad de Usuario Final, autorizo a SODIG S.A., para que
+                                utilice la información proporcionada para los siguientes fines específicos:
+                                Receptar;
+                                Validar;
+                                Verificar; y,
+                                Gestionar
+                                Solicitudes de emisión o revocación de certificados de firma electrónica.
+                                Así mismo en mi calidad de Usuario Final autorizo que SODIG S.A., haga uso para los
+                                fines señalados en el párrafo precedente, así como almacene mis datos personales por
+                                un plazo de quince (15) años contados a partir de la suscripción del presente
+                                instrumento.
+                                <br /><strong> DERECHO DE ELIMINACIÓN DE DATOS PERSONALES</strong><br />
+                                El Usuario en armonía y cumplimiento de lo señalado en el artículo 15 de la Ley Orgánica
+                                de Protección de Datos Personales podrá solicitar a SODIG S.A., la eliminación de
+                                registro de datos proporcionados por este, siguiendo el procedimiento establecido por
+                                SODIG S.A., de tal manera que se implementará métodos y técnicas orientadas a
+                                eliminar, hacer ilegible o dejar irreconocible de forma definitiva y segura los datos
+                                personales proporcionados por el usuario.
+                                SODIG S.A., tendrá un plazo de quince (15) días contados a partir de la solicitud de
+                                eliminación de datos personales para proceder con la misma.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="pt-3 pr-2" style="text-align:right">
+                        <button onclick="cerrarModal()" class="btn btn-primary btn-sm">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/Script/ScriptAuth.js"></script>
+</body>
+</html>

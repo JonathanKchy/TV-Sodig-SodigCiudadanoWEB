@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Pago Online |";
+}
+
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<link href="~/Content/css/EstilosCard.css" rel="stylesheet" />
+<link href="~/Content/css/Estilos.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="col-md-6 pl-5 pr-5">
+            <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+            <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+        </div>
+
+        <div class="pt-5" style="margin-top:7%">
+            <span class="section pb-3 pl-5"><i class="fas fa-pager"></i> Realizar Pago Online</span>
+            <br />
+
+            @if (ViewData["Mensaje"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewData["Mensaje"]
+                </div>
+
+            }
+            <div class="row">
+                <div class="col-md-12 pl-5 pr-5">
+                    <h1>Total: $ @ViewBag.total</h1>
+                </div>
+                <div class="col-md-12 pl-5 pr-5">
+                    <table class="table table-responsive-lg">
+                        <thead class="titulo">
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Descripción</th>
+                                <th>Subtotal</th>
+                                <th>IVA</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cell">
+                            <tr>
+                                <th>1</th>
+                                <th>@ViewBag.descripciónProducto</th>
+                                <th>@ViewBag.SubTotal</th>
+                                <th>12%</th>
+                                <th>@ViewBag.total</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6 offset-sm-3">
+                    <form action="/Pago/Pago" class="paymentWidgets" data-brands="DINERS VISA MASTER DISCOVER AMEX" style="color:black">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script type="text/javascript">  
+var wpwlOptions = {  
+onReady: function() {  
+   
+var datafast= '<br/><br/><img src='+'"https://www.datafast.com.ec/images/verified.png" style='+'"display:block;margin:0 auto; width:100%;">';  
+$('form.wpwl-form-card').find('.wpwl-button'). before(datafast);  
+   
+},  
+style: "card",  
+locale: "es",  
+labels: {cvv: "CVV", cardHolder: "Nombre(Igual que en la tarjeta)"}  
+}  
+</script>
+</div>
+
+
+
+@section Scripts {
+    <script src="@ViewBag.urlPago/v1/paymentWidgets.js?checkoutId=@ViewBag.checkOut "></script>
+    <script type="text/javascript" src="https://www.datafast.com.ec/js/dfAdditionalValidations1.js"></script>
+    <script src="~/Scripts/Script/ScriptDatosUsuario.js"></script>
+
+
+}

@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Proceso Finalizado";
+}
+<link href="~/Content/css/EstilosModalRechazo.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+            <span class="section pb-3"> <i class="fas fa-check-circle"></i> Proceso Final</span>
+            <br />
+
+            <div class="div-registro">
+
+                
+                <div>
+                        <div class="modal-header flex-column">
+                          
+                            <h4 class="modal-title w-100">Ha ocurrido un problema al momento de registrar su solicitud de pago</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="textoRechazado">En este momento se ha debitado un consumo desde su tarjeta</p>
+                            <p id="textoRechazado">Para continuar con su proceso, por favor, comuníquese con el administrador del sistema o genere un ticket.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <a href="/Ticket"  class="btn btn-danger">Generar un ticket</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+}

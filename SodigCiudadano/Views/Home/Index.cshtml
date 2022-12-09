@@ -1,0 +1,373 @@
+﻿@model IEnumerable<SodigCiudadano.Models.Entidades.TipoElector>
+@{
+    ViewBag.Title = "INICIO |";
+}
+
+<link href="~/Content/assets/css/Estilos/EstilosModal.css" rel="stylesheet" />
+
+<div class="container mt-5">
+
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="selected" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-pasos"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-12 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+            <br />
+
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { onsubmit = "return validar()" }))
+            {
+
+                <span class="section pb-3  pl-4" style="text-align:center;">¡ Bienvenido ! Está a punto de obtener su Certificado de Firma Digital</span>
+                <br />
+                <div class="div-registro">
+                    <span id="date">DATOS PERSONALES DEL SOLICITANTE:</span>
+                    <br />
+                    <br />
+                    <div class="field item campos form-group">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align"><i class="fa fa-clipboard-list"></i> Tipo De Servicio</label>
+                        <div class="col-md-8 col-sm-6">
+                            @Html.DropDownList("idTipoSolicitud", null, "Seleccione una opción", htmlAttributes: new { @class = "form-control", @id = "idTipoSolicitud" })
+                        </div>
+                    </div>
+                    <label id="mensajeTipoSolicitud" hidden class="col-form-label alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!. Seleccione el tipo de servicio</label>
+                    <div class="field item campos form-group">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align"><i class="fas fa-user-alt"></i> Tipo De Persona</label>
+                        <div class="col-md-8 col-sm-6">
+                            @Html.DropDownList("idTipoPersona", null, htmlAttributes: new { @class = "form-control", @id = "idTipoPersona", @readonly = "readonly" })
+                            <!--<span style="font-size:12px;">*Si elige la opcion Jurídica , por favor acercarse presencialmente al Registro Civil.</span>-->
+                        </div>
+                        @if (ViewBag.mensaje)
+                        {
+                            <label id="mensajeHistoria" class="col-form-label col-md-3 col-sm-3  alert-warning ">Este servicio no está disponible.<br /> ACERQUESE AL REGISTRO CIVIL</label>
+                        }
+                    </div>
+                    <label id="mensajeTipoPersona" hidden class="col-form-label   alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!. Seleccione el tipo de persona</label>
+
+                    <div class="field item  campos form-group">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align"> <i class="fas fa-folder"></i> Tipo De Contenedor</label>
+                        <div class="col-md-8 col-sm-6">
+                            @Html.DropDownList("idTipoContenedor", null, htmlAttributes: new { @class = "form-control", @id = "idTipoContenedor", @readonly = "readonly" })
+                            <span style="font-size:12px;">*Si necesita la firma en Token, por favor acercarse presencialmente al Registro Civil</span>
+                        </div>
+                    </div>
+                    <label id="mensajeTipoContenedor" hidden class="col-form-label  alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!. Seleccione el tipo de contenedor</label>
+
+                    <div class="field item  campos  form-group">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align"><i class="fas fa-id-card"></i> Tipo De Documento</label>
+                        <div class="col-md-8 col-sm-6">
+                            @Html.DropDownList("idTipoIdentificacion", null, "Seleccione una opción", htmlAttributes: new { @class = "form-control", @id = "idTipoIdentificacion" })
+                            <input id="codigoPasaporteInterno" value="@ViewBag.codigoPasaporte" hidden />
+                        </div>
+                    </div>
+                    <label id="mensajeTipoIdentificacion" hidden class="col-form-label alerta"><i class="fas fa-exclamation-circle red "></i> &nbsp; OH !!.Seleccione el tipo de documento</label>
+                    <br />
+                    <div id="panelTipoElector" hidden>
+                        <span class="section pb-3 pl-4 pt-3" style="font-size:15px;">Marque la casilla en caso de que corresponda a una de las opciones:</span>
+                        <div class="col-md-4"></div>
+                        <div id="panelOpciones">
+                            @foreach (var item in Model)
+                            {
+                                <div class="field item form-group">
+                                    <div class="col-md-6 col-sm-6 pt-2 mt-1" style="text-align:left">
+                                        <div class="checkbox">
+                                            <label style="font-size:13px;" id="label_@item.idTipoElector">
+                                                <input name="idTipoElector" id="tipoElector_@item.idTipoElector" type="radio" value="@item.idTipoElector"> @item.tipoElector
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <label id="advertencia" hidden style="font-size:13px;color:red"><i class="fas fa-exclamation-circle red"></i> Para continuar, por favor, seleccione una opción. </label>
+                        </div>
+                    </div>
+                    <div class="field item campos form-group">
+                        <div class="col-md-12 col-sm-9 pt-2 mt-1">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="checkTerminos" value=""> Acepto los términos y condiciones
+                                </label>
+                                <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label text-danger  "><i class="fas fa-exclamation-circle red"></i> &nbsp; Para continuar con el proceso, es necesario aceptar los términos y condiciones</label>
+                            </div>
+                            <button type="button" id="btn-one" class="btn btn-success" onClick="history.back()"> <i class="fa fa-arrow-circle-left"></i> Regresar </button>
+                            <button type="submit" id="btn-one" class="btn btn-success">Siguiente <i class="fa fa-arrow-circle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog" style="margin-left:20%;">
+            <img src="~/Content/images/pasos.png" id="pasos" />
+
+        </div>
+    </div>-->
+
+</div>
+
+<div class="myModal" hidden id="miModal" name="miModal2">
+    <div class="flex" id="flex">
+        <div class="contenido-modal" style="width: 800px; height:550px;">
+            <div class="modal-Titulo flex">
+                <h6 id="tituloModal" class="text-white pt-2">Términos y condiciones</h6>
+                @*<span class="cerrarModal" onclick="cerrarModal()" id="cerrarModal">&times;</span>*@
+            </div>
+            <div class="modal-Cuerpo">
+                <div style="display:block; position:relative; height: 430px; overflow:auto">
+                    <div class="container pr-2">
+                        <h6><strong>TÉRMINOS Y CONDICIONES DEL SERVICIO DE AUTORIDAD DE REGISTRO PARA LA EMISIÓN DE FIRMAS ELECTRÓNICAS</strong></h6>
+                        <h6><strong>INFORMACIÓN Y ANTECEDENTES DE ECIBCE ECUADOR</strong></h6>
+                        <p>
+                            Banco Central del Ecuador es una entidad acreditada en el Registro Público Nacional
+                            de Entidades de Certificación de Información y Servicios Relacionados, mediante la
+                            resolución ARCOTEL-2018-0902 del 5 de noviembre de 2018. La Entidad de
+                            Certificación de Información del Banco Central del Ecuador, en adelante ECIBCE, fue
+                            inscrita el día 30 de octubre de 2018 en el Registro Público Nacional de Entidades de
+                            Certificación de Información y Servicios Relacionados en el ACTA 1 PÁGINA 6.
+                            La Entidad de Certificación de Información del Banco Central del Ecuador, como
+                            prestadora de servicios de certificación electrónica, se encuentra regulada por la Ley
+                            67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos del 27 de febrero de
+                            2002, y en el ámbito de su infraestructura de clave pública, conforme a lo estipulado en
+                            su Declaración de Prácticas de Certificación (en adelante, DPC), y sus Políticas de
+                            Certificación para Certificados de Firma electrónica (en adelante, PCs).
+                            Que la DPC de la ECIBCE reconoce expresamente la posibilidad de que esta Autoridad
+                            de Certificación puede valerse de la colaboración de terceras personas, físicas o
+                            jurídicas. Esta colaboración se restringe exclusivamente a la ayuda en labores
+                            administrativas, en ningún caso intervienen en la prestación de servicios de certificación,
+                            ni proporcionan ni administran ninguno de los servicios ofrecidos por ECIBCE.
+                            Básicamente, su función es la de colaborar en procesos de identificación de personas,
+                            tramitación de solicitudes, desmaterialización de documentos, soporte informativo e
+                            intermediación en la suscripción de contratos de prestación de servicios. Y aunque
+                            hacen entrega de instrumentos de firma electrónica, estos dispositivos no se encuentran
+                            ni activados ni incorporan claves de usuario. Este documento, la DPC y su adenda
+                            detallan pormenorizadamente las funciones que se llevan a cabo por estas entidades
+                            colaboradoras.
+                            Que en el ámbito de la Infraestructura de Clave Pública de la ECIBCE (en adelante,
+                            PKI), estas entidades colaboradoras son calificadas como Terceros Vinculados a la
+                            ECIBCE (en adelante, TV).
+                            Que, con el fin de facilitar los trámites de solicitud de certificados, dotar de una atención
+                            personalizada y próxima al lugar de residencia de los usuarios de la ECIBCE, es de
+                            interés de esta Autoridad de Certificación contar con una red de alta capilaridad de TVs
+                            para la gestión presencial o en línea de sus servicios.
+                            <br /><strong>INFORMACIÓN Y ANTECEDENTES DE SODIG S.A.</strong><br />
+                            SODIG S.A. es una Autoridad de Registro Reconocida por ECIBCE y registrada como
+                            tercero vinculado de ECIBCE en la ARCOTEL.
+                            <br /><strong> DECLARACIÓN Y CONOCIMIENTO DEL SERVICIO Y CONDICIONES PRESTADAS POR TUFIRMAEC.COM </strong><br />
+                            Declaro que he leído y conozco acerca de ECIBCE y SODIG S.A.
+                            Declaro que he leído, conozco y acepto en el ámbito de mis derechos y obligaciones los
+                            siguientes documentos e información:
+                            La Ley 67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos con especial
+                            atención en lo descrito en los artículos 13, 14, 15, 16 y 17 y su reglamento con especial
+                            atención en el artículo 19
+                            La DPC y las PCs que son documentos públicos de la ECIBCE y están disponibles en
+                            las URLs:
+                            https://eci.bce.ec/marco-normativo/
+                            Toda la información, explicaciones, precios y documentación la cual ha sido
+                            proporcionada de forma clara y por esta razón ha sido elegida por mi propia voluntad
+                            según lo indica el portal web www.tufirmaec.com de propiedad de la empresa SODIG
+                            S.A.
+                            Además, declaro que toda la información, datos y documentos que he cargado es veraz,
+                            exacta y cumple con los requisitos establecidos en el portal web: www.tufirmaec.com y
+                            en aplicación del principio de buena fe contenido en el artículo 1562 del Código Civil
+                            ecuatoriano.
+                            De igual manera declaro que toda la documentación cargada en línea es de mi exclusiva
+                            responsabilidad y en caso de comprobarse que la documentación presentada no se
+                            ajusta a la verdad, el trámite podrá ser rechazada(según lo indica la PC de la ECiBCE
+                            en el numeral 8.3.1), archivado y notificado a la entidad de control ARCOTEL según e
+                            incluso, en caso de que la comprobación fuese luego de la emisión, el certificado de
+                            firma electrónica emitido carecerá de validez alguna, de conformidad con lo establecido
+                            en el artículo 18, artículo 19 - literal d, en el artículo 25 - literales b y c y en el artículo 34
+                            de la Ley 67/2002 de Comercio Electrónico, Firmas y Mensajes de Datos, sin perjuicio
+                            de las acciones legales incluyendo las de carácter penal a que hubiere lugar.
+                            <br /><strong>AUTORIZACIONES</strong><br />
+                            Bajo mi total y pleno conocimiento y propia voluntad declaro y reitero las siguientes
+                            autorizaciones:
+                            Autorizo de forma expresa a SODIG S.A. a efectuar averiguaciones para comprobar u
+                            obtener aclaraciones e información adicional sobre el trámite de emisión de la firma
+                            electrónica solicitada en el portal web www.tufirmaec.com
+                            Autorizo a SODIG S.A., tercero vinculado de ECIBCE a que gestione ante la ECIBCE,
+                            la emisión, renovación, recuperación de contraseña o revocación de la firma electrónica
+                            a mi nombre.
+                            Autorizo a SODIG S.A., tercero vinculado de ECIBCE para que gestione la recuperación
+                            de clave de la firma electrónica a mi nombre, en caso de pérdida u olvido, previa
+                            solicitud.
+
+                            Autorizo a ECIBCE la emisión de la firma electrónica a mi nombre.
+                            Consentimiento de uso de datos personales Usuario final:
+                            De conformidad al artículo 7 literal a); y, artículo 8 de la Ley Orgánica de Protección de
+                            Datos Personales, en mi calidad de Usuario Final, autorizo a SODIG S.A., para que
+                            utilice la información proporcionada para los siguientes fines específicos:
+                            Receptar;
+                            Validar;
+                            Verificar; y,
+                            Gestionar
+                            Solicitudes de emisión o revocación de certificados de firma electrónica.
+                            Así mismo en mi calidad de Usuario Final autorizo que SODIG S.A., haga uso para los
+                            fines señalados en el párrafo precedente, así como almacene mis datos personales por
+                            un plazo de quince (15) años contados a partir de la suscripción del presente
+                            instrumento.
+                            <br /><strong> DERECHO DE ELIMINACIÓN DE DATOS PERSONALES</strong><br />
+                            El Usuario en armonía y cumplimiento de lo señalado en el artículo 15 de la Ley Orgánica
+                            de Protección de Datos Personales podrá solicitar a SODIG S.A., la eliminación de
+                            registro de datos proporcionados por este, siguiendo el procedimiento establecido por
+                            SODIG S.A., de tal manera que se implementará métodos y técnicas orientadas a
+                            eliminar, hacer ilegible o dejar irreconocible de forma definitiva y segura los datos
+                            personales proporcionados por el usuario.
+                            SODIG S.A., tendrá un plazo de quince (15) días contados a partir de la solicitud de
+                            eliminación de datos personales para proceder con la misma.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="pt-3 pr-2" style="text-align:right">
+                    <button onclick="cerrarModal()" class="btn btn-primary btn-sm">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="margin-top:50%">
+            <div class="modal-header">
+                <h4 class="modal-title"><i class="fas fa-info"></i> Información Importante</h4>
+            </div>
+            <div class="modal-body">
+                <p id="error"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar <i class="fas fa-times-circle"></i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="~/Scripts/Script/ScriptTipoSolicitud.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="~/Vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/js/custom.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <script>
+        $(document).ready(function () {
+            $("#mostrarmodal").modal("show");
+        });
+
+
+        $("#idTipoPersona").click(function () {
+            var option_value = document.getElementById("idTipoPersona").value;
+            if (option_value == "17") {
+                $("#error").html("Esta opción  solo se encuentra disponible de manera presencial. Por favor acercarse a la oficina del Registro Civil más cercana");
+                $('#Modal').modal('show');
+                $("#idTipoIdentificacion").prop("disabled", true);
+            } else {
+                $("#idTipoIdentificacion").prop("disabled", false);
+            }
+        });
+
+        actualizar2();
+        let idTipoPersona = document.getElementById('idTipoPersona');
+
+        idTipoPersona.addEventListener("change", actualizar);
+
+        function actualizar() {
+            $.get('/SodigCiudadanoZona6/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=' + idTipoPersona.value)
+                .done(function (response) {
+                    let idTipoIdentificacion = document.getElementById('idTipoIdentificacion');
+                    idTipoIdentificacion.innerHTML = '';
+                    let opt = document.createElement('option');
+                    opt.appendChild(document.createTextNode('Seleccione una opción'));
+                    opt.value = 0;
+                    idTipoIdentificacion.appendChild(opt);
+                    response.data.forEach(function (element) {
+                        opt = document.createElement('option');
+                        opt.appendChild(document.createTextNode(element.tipoIdentificacion));
+                        opt.value = element.idTipoIdentificacion;
+                        idTipoIdentificacion.appendChild(opt);
+                    })
+                })
+
+        }
+
+        function actualizar2() {
+            $.get('/SodigCiudadanoZona6/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=16')
+                .done(function (response) {
+                    let idTipoIdentificacion = document.getElementById('idTipoIdentificacion');
+                    idTipoIdentificacion.innerHTML = '';
+                    let opt = document.createElement('option');
+                    opt.appendChild(document.createTextNode('Seleccione una opción'));
+                    opt.value = 0;
+                    idTipoIdentificacion.appendChild(opt);
+                    response.data.forEach(function (element) {
+                        opt = document.createElement('option');
+                        opt.appendChild(document.createTextNode(element.tipoIdentificacion));
+                        opt.value = element.idTipoIdentificacion;
+                        idTipoIdentificacion.appendChild(opt);
+                    })
+                })
+
+        }
+
+    </script>
+}
+

@@ -1,0 +1,122 @@
+﻿
+
+
+@{
+    ViewBag.Title = "seleccionar carga archivo";
+}
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="done" isdone="1" rel="1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Tipo Solicitud</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="done" isdone="1" rel="2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Tipo Contenedor</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="done" isdone="1" rel="3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Tipo Documento</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no">5</span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="pt-2 pb-5">
+            <div class="col-md-12 pl-5 pr-5">
+                <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+            </div>
+            <div class="col-md-12" style="text-align:center">
+                @{
+                    string texto = "Captura de la Identificación";
+                    if (ViewBag.tipoIdentificacion == "1")
+                    {
+                        texto = "Captura de la Cédula";
+                    }
+                    else if (ViewBag.tipoIdentificacion == "2")
+                    {
+                        texto = "Captura del Pasaporte";
+                    }
+                }
+
+                <h2 class="text-dark">@texto</h2>
+            </div>
+        </div>
+
+        <div class="pt-2 pl-5 pt-5">
+            <div class="col-md-6 col-sm-6   profile_details" style="text-align:center">
+                <div class="well profile_view">
+                    <div class="col-sm-12">
+
+                        <div class="right col-sm-12 text-center">
+                            <img src="~/Content/images/FileExplorer.png"  width="200" style="height:150px;">
+                        </div>
+                    </div>
+                    <div class=" bottom text-center">
+                        <div class=" col-sm-12 emphasis">
+                            
+                            <a href="@Url.Action("RedirecionCapturaDocumento", "CapturaDocumento", new { ti = @ViewBag.tipoIdentificacion })" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                                Explorador de Archivos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6  profile_details" style="text-align:left">
+                <div class="well profile_view">
+                    <div class="col-sm-12">
+
+                        <div class="right col-sm-12 text-center">
+                            <img src="~/Content/images/WebCam.png" alt="" width="200" style="height:150px;">
+                        </div>
+                    </div>
+                    <div class=" bottom text-center">
+                        <div class=" col-sm-12 emphasis">
+                            <a href="@Url.Action("RedirecionCapturaDocumentoCamara", "CapturaDocumento", new { ti = @ViewBag.tipoIdentificacion })"  style="background:#07577A" class="btn text-white btn-sm btn-block">
+                                Cámara Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</div>
+
+

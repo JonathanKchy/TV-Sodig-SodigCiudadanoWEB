@@ -1,0 +1,282 @@
+﻿
+@{
+    ViewBag.Title = "SUBIR PAPELETA DE VOTACIÓN |";
+}
+
+<style>
+    #videoElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+
+    #canvasElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+</style>
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="selected" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-pasos"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-3 pl-5 pr-5"> </div>
+            <div class="col-md-6 pl-5 pr-5">
+                <div hidden id="mensajeAlerta" class="alert alert-danger">
+                    Texto Prueba
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-2 pb-5">
+            <div class="col-md-12 pl-5 pr-5">
+                <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+            </div>
+
+        </div>
+
+        <div class="pt-2 pl-5 pt-5" style="float:left;margin-top:5%; ">
+            <div class="profile_view">
+                <div class="col-sm-12" id="exploradorArchivos" hidden>
+                    <a href="#" onclick="mostrarPapeleta();" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                        <i class="fas icons fa-folder-open"></i> &nbsp;   Explorador de Archivos
+                    </a>
+                </div>
+                <div class="col-sm-12" id="camara" style="margin-top:5%">
+                    <a onclick="mostrarPapeletaCam();" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                        <i class="fas  fa-video"></i> &nbsp; Activar Cámara Web
+                    </a>
+                    <a onClick="history.back()" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                        <i class="fa fa-arrow-circle-left"></i> &nbsp;  Regresar Paso Anterior
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Img Precaucion-->
+        <div id="img-preca">
+            <img src="~/Content/images/papeleta1.png" alt="" width="30%">
+        </div>
+
+        <!--SubirPapeletaArchivo-->
+        <div class="pt-5" id="flotante" style=" display: none;">
+            <div id="close">
+                <span class="section pb-3 pl-4"> <i class="fas fa-upload"></i> Subir Archivo de Papeleta de Votación <a href="javascript:cerrar();"><i class="far red fa-times-circle"></i></a></span>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5">
+                </div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+
+            @using (Html.BeginForm("CapturaPapeletaArchivo", "VerificarExcepcion", FormMethod.Post, new { onsubmit = "return validarPapeleta()", enctype = "multipart/form-data" }))
+            {
+
+
+                <div class="row">
+                    <div class="col-md-12 pt-5" style="text-align:center">
+                        <img src="~/Content/images/papeleta.png" id="capture" alt="" width="300px">
+                        <br />
+
+                        <label for="postedFile" class="subir btn  btn-icon rounded-pill">
+                            <i class="fas fa-cloud-upload-alt" id="cloud"></i> Seleccionar archivo (jpeg, jpg, png, pdf)
+                        </label>
+                    </div>
+                    <div class="col-md-12" style="text-align:left">
+                        <input onclick="validarArchivo()" accept=".png, .jpg, .jpeg, .pdf" id="postedFile" name="postedFile" onchange='cambiar()' type="file" style='display: none;' />
+                    </div>
+
+                    <div class="col-md-12" style="text-align:center">
+                        <div id="info"></div>
+                    </div>
+
+                    <div class="col-md-12" style="text-align:center">
+                        <label id="mensajeTérmino" style="font-size:14px;" hidden class="col-form-label text-danger  label-align">Por favor, Seleccione un archivo</label>
+                    </div>
+
+                    <div class="col-md-12 pt-5 pl-5" style="text-align:center">
+                        <button type="button" id="btn-one" class="btn btn-success" onClick="history.back()"> <i class="fa fa-arrow-circle-left"></i> Regresar </button>
+                        <button type="submit" id="btn-one1" class="btn btn-success">Continuar <i class="fa fa-arrow-circle-right"></i></button>
+                    </div>
+
+                </div>
+
+            }
+        </div>
+        <!--Fin Subir por Archivo-->
+        <!--Capturar por Camara-->
+
+        <div id="flotantePapeleta" style="display:none">
+            <div id="close">
+                <span class="section pb-3 pl-4"> </span>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 pt-1" style="text-align: center;">
+                    <img src="~/Content/images/advertencia.png" width="30%" id="alertCam" /><br /><br />
+                    <!--<a class="btn cam text-white" onclick="history.back()" id="btnRegre" hidden:false> <i class="fa fa-arrow-circle-left"></i> Regresar </a>-->
+                    <a class="btn cam text-white" onclick="iniciarVideoPapeleta()" id="btnIniciarCamara"> <i class="fas fa-camera"></i> Iniciar Cámara </a>
+                </div>
+                <img src="~/Content/images/rec.png" hidden id="imagenCanvas" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 pt-2" style="text-align:center;margin-top:-5%;" id="panelVideo" hidden>
+                    <h2>Por favor, acerque su papeleta hacia los recuadros negros</h2>
+                    <div class="col-sm-12 video">
+                        <video width="330" height="350" id="canvasElement1" autoPlay class="js-video"></video>
+                    </div>
+                    <div class="col-md-12 pt-0 btn-video" style="text-align:center">
+                        <a onclick="apagarVideo()" style="width:150px; cursor:pointer" class="btn btn-primary text-white "><i class="fas fa-power-off"></i> </a>
+                        <a class="btn cam text-white" style="width:150px; cursor:pointer" id="alertbox3" onclick="capturarImagenPapeleta()"><i class="fas fa-camera"></i></a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <canvas width="330" height="350" hidden autoPlay class="js-canvas"></canvas>
+
+                    </div>
+                </div>
+            </div>
+            <!--PanelCapturaPapeleta-->
+            <div class="row">
+                <div class="col-md-12 pt-2" style="text-align:center">
+                    <div className="col-md-12" id="panelCaptura" hidden>
+                        <h2> <i class="fas fa-id-card"></i>Papeleta de Votación Capturada</h2>
+                        <form>
+                            <div className="form-group">
+                                <div class="col-sm-12" style="height:270px;">
+                                    <img src="" id="photo" name="file1" />
+                                </div>
+                                <div class="col-md-12 pt-0" style="text-align:center">
+                                    <a class="btn btn-primary text-white" style="width:200px; cursor:pointer" onclick="iniciarVideoPapeleta()"> <i class="fas fa-camera"></i> Capturar Otra Imagen</a>
+                                    <button onclick="analizarPapeleta()" id="btn-one3" style="width:100px" class="btn btn-success text-white">Continuar <i class="fas fa-arrow-circle-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <img src="~/Content/images/papeleta.png" id="capture" alt="" width="300px" style="margin-top:3%;display: none">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><i class="fas fa-info"></i> Información importante</h4>
+            </div>
+            <div class="modal-body">
+                <p id="error"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar <i class="fas fa-times-circle"></i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Script/scriptCapturaCedulaCamara.js"></script>
+    <script src="~/Scripts/Script/scriptCapturaCedulaArchivo.js"></script>
+    <script>
+        $(document).ready(function () {
+            var movil = getMobileOperatingSystem();
+            if (movil) {
+                var exploradorArchivos = document.getElementById('exploradorArchivos');
+                exploradorArchivos.hidden = true;
+                var camara = document.getElementById('camara');
+                camara.hidden = false;
+            }
+        });
+
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/windows phone/i.test(userAgent)) {
+                return true
+            }
+
+            if (/android/i.test(userAgent)) {
+                return true
+            }
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return true
+            }
+
+            return false
+        }
+
+
+        function validarPapeleta() {
+            var postedFile = document.getElementById("postedFile");
+
+            if (postedFile.files.length === 0) {
+                var elemento = document.getElementById("mensajeTérmino");
+                elemento.hidden = false;
+                return false;
+            }
+            $('#btn-one1').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Procesando...').attr('disabled', true);
+        }
+
+
+    </script>
+
+}

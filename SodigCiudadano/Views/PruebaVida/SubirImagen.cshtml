@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "Cargar Archivo";
+}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="~/Content/css/Estilos.css" rel="stylesheet" />
+<link href="~/Content/css/EstilosModalSuccess.css" rel="stylesheet" />
+<link href="~/Content/css/EstilosModalRechazo.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="done" isdone="1" rel="1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Tipo Solicitud</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="done" isdone="1" rel="2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Tipo Contenedor</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="done" isdone="1" rel="3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Tipo Documento</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no">5</span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"> </div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div hidden id="mensajeAlerta" class="alert alert-danger">
+                        Texto Prueba
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="section text-left pl-4">Captura de foto personal</span>
+                <div class="col-md-12 pt-5" style="text-align:center">
+                    <a class="btn btn-success btn-round text-white" style="cursor:pointer"  onclick="iniciarVideoCapt()" id="btnIniciarCamaraCapt">Iniciar Cámara Web</a>
+                </div>
+                <img src="~/Content/images/rec.png" hidden id="imagenCanvasCapt" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 pt-2" style="text-align:center" id="panelVideoCapt" hidden>
+
+                    <div class="col-sm-12" style="height:270px;">
+                        <canvas width="330" height="350" autoPlay class="js-canvas"></canvas>
+                    </div>
+                    <div class="col-md-12 pt-0" style="text-align:center">
+                        <a class="btn btn-success text-white" style="width:150px; cursor:pointer" onclick="capturarImagenCapt()">Capturar</a>
+                        <a onclick="apagarVideoCapt()" style="width:150px; cursor:pointer" class="btn btn-primary text-white ">Apagar Cámara </a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <video style="position: absolute; top: 0; visibility: hidden; left: 0; opacity: 0"
+                               width="20" height="20" autoPlay class="js-video"></video>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 pt-2" style="text-align:center">
+                        <div className="col-md-12" id="panelCapturaCapt" hidden>
+                            <form>
+                                <div className="form-group">
+                                    <div class="col-sm-12" style="height:270px;">
+                                        <img src="" id="photo3" name="file1" />
+                                    </div>
+                                    <div class="col-md-12 pt-0" style="text-align:center">
+                                        <button onclick="subirImagen()" id="btn-one" style="width:100px" class="btn btn-success text-white">Continuar</button>
+                                        <a class="btn btn-primary text-white" style="width:200px; cursor:pointer" onclick="iniciarVideoCapt()">Capturar Otra Imagen</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<div id="success_tic" data-backdrop="static" class="modal fade" role="dialog">
+    <<div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            @*<a class="close" href="#" data-dismiss="modal">&times;</a>*@
+            <div class="page-body">
+                <h1 style="text-align:center;" />
+                <div class="checkmark-circle">
+                    <div class="background"></div>
+                    <div class="checkmark draw"></div>
+                </div>
+                <div class="head">
+                    <h4 style="margin-top:5px;">Identificación Validada</h4>
+                    <h4 style="margin-top:5px;">Reconocimiento Facial Aporbado</h4>
+                    <div class="pt-3">
+                        <button onclick="onClickAceptar()" class="btn btn-success">Aceptar</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="myModal" data-backdrop="static" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header flex-column">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <h4 class="modal-title w-100">Registro de Biometría Rechazado</h4>
+            </div>
+            <div class="modal-body">
+                <p id="textoRechazado">Los documentos capturados no coinciden con los registros oficiales.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" onclick="onClickRechazar()" class="btn btn-danger">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Script/scriptCapturaCedulaCamara.js"></script>
+}
+
+
+

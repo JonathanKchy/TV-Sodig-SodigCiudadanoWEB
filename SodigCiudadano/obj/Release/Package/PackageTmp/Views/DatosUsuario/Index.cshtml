@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Identificación del solicitante";
+}
+<link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" rel="stylesheet" />
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+            <br />
+
+            @using (Html.BeginForm("Index", "DatosUsuario", FormMethod.Post, new { onsubmit = "return validar()", name = "formularioDatosNombres", id = "formularioDatosNombres" }))
+            {
+                <span class="section pb-3 pl-5"><i class="fas fa-id-card"></i> Datos del Solicitante válidados con la Dinardap</span>
+                <br />
+                <br />
+
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Primer Apellido </label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["primerApellido"]" name="apellidoPaterno" />
+                    </div>
+                </div>
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Segundo Apellido</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["segundoApellido"]" name="apellidoMaterno" />
+                    </div>
+                </div>
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Primer Nombre</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["primerNombre"]" name="primerNombre" />
+                    </div>
+                </div>
+
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Segundo Nombre</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["segundoNombre"]" name="segundoNombre" />
+                    </div>
+                </div>
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Cédula</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["numeroIdentificacion"]" name="cedula" readonly />
+                    </div>
+                </div>
+
+
+
+                <div class="field item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3  label-align">Tipo De Identificación</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" value="@Session["tipoIdentificacion"]" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group pt-3" style="text-align:right">
+                    <div class="col-md-6 offset-md-3">
+                        <a onclick="abrirModal()" id="btn-one" class="btn btn-primary text-white" style="cursor:pointer">Rechazar <i class="fas fa-times-circle"></i></a>
+                        <button type="submit" id="btn-one" class="btn btn-success">Aceptar <i class="fas fa-check-circle"></i> </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="myModal" id="miModal" name="miModal">
+    <div class="flex" id="flex">
+        <div class="contenido-modal" style="width: 550px; height:190px;">
+            <div class="modal-Titulo flex">
+                <h6 id="tituloModal" class="text-white pt-2">Confirmar</h6>
+                <span class="cerrarModal" onclick="cerrarModal()" id="cerrarModal">&times;</span>
+            </div>
+            <div class="modal-Cuerpo">
+
+                <h5 id="textModal" class="text-center">  ¿Está Seguro que desea terminar el proceso?</h5>
+                <input type="text" id="idTipoElector" name="idTipoElector" hidden />
+                <br />
+                <div class="row" style="text-align:center">
+                    <div class="col-md-12" style="text-align:right">
+                        <button onclick="cerrarModal()" id="btn-one" type="button" class="btn btn-primary">Cancelar <i class="fas fa-times-circle"></i></button>
+                        <a href="/DatosUsuario/Redireccion" id="btn-one" class="btn btn-success">Aceptar <i class="fas fa-check-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+    <script src="~/Scripts/Script/ScriptDatosUsuario.js"></script>
+}
+

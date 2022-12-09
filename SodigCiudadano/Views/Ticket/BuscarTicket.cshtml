@@ -1,0 +1,79 @@
+﻿
+@model IEnumerable<SodigCiudadano.Models.Entidades.ComentarioTicket>
+@{
+    ViewBag.Title = "Tickets";
+}
+
+
+<div class="pt-3">
+    <h2 class="text-center pt-5" style="color:black">Buscar Ticket</h2>
+</div>
+
+
+<div class="row pt-2 pb-4">
+    <div class=" pl-5 pr-5 col-md-5 text-center">@Html.Partial("~/Views/Shared/_Flash.cshtml")</div> <br />
+</div>
+
+
+<div class="row ">
+    <div class="col-md-12 pl-5 pr-5">
+        @using (Html.BeginForm("BuscarTicket", "Ticket", FormMethod.Post, new { onsubmit = "return validarFormularioBuscar()", enctype = "multipart/form-data" }))
+        {
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-md-5 mb-3">
+                        <label for="validationDefault01" style="color:black">Número de Ticket</label>
+                        <input class="form-control" id="nTicket" name="nTicket" />
+                        <div hidden class="text-danger" id="advTicket"><p></p> </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <label for="validationDefault02" style="color:black">Identificación</label>
+                        <input class="form-control" id="identificacion" name="identificacion" />
+                        <div hidden class="text-danger" id="advIdentificacion"><p></p> </div>
+                    </div>
+                    <div class="col-md-2 mb-3 pt-3 mt-2">
+                        <button type="submit" id="btn-submit" class="btn btn-success "><i class="fa fa-search"></i> Buscar Ticket</button>                        
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Count() > 0)
+        {
+            <div class="container">
+                <div class="row pb-3 pt-2">
+                    <h2 style="color:black">Estado del Ticket: @ViewBag.estadoTicket</h2>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered table-responsive-lg pt-5" id="tabla">
+                        <thead class="letraNegra ">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Comentario</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.fechaIngreso </td>
+                                    <td>@item.comentario</td>
+                                    <td>@item.estadoTicket</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>           
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Script/scriptTickets.js"></script>
+}
+
+
+

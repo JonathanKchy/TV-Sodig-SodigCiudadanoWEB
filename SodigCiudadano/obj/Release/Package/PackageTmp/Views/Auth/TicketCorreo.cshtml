@@ -1,0 +1,109 @@
+﻿@model SodigCiudadano.Models.Entidades.Ticket
+@{
+    ViewBag.Title = "Tickets";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar Sesión | </title>
+
+    <link href="~/Vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Vendors/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+    <!-- NProgress -->
+    <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="~/Content/css/custom.min.css" rel="stylesheet" />
+
+
+    <link href="~/Content/css/EstilosLogin.css" rel="stylesheet" />
+
+    <style>
+        .letraBlanca {
+            color: white;
+        }
+    </style>
+
+</head>
+<body class=" fondoLogin">
+    <div class="container">
+
+        <div class="col-md-8 offset-sm-2 pt-5 pl-5 pr-5">
+            <h2  class="pb-4">Reportar Problema</h2>
+            @using (Html.BeginForm("TicketCorreo", "Auth", FormMethod.Post, new { onsubmit = "return validarFormulario()", enctype = "multipart/form-data" }))
+            {
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01" >Identificación</label>
+                            @Html.EditorFor(model => model.identificacion, new { htmlAttributes = new { @class = "form-control  ", @id = "identificacion" } })
+                            <div hidden class="text-danger" id="advIdentificacion"><p>Ingrese la identificación</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" >Teléfono</label>
+                            @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", @id = "telefono" } })
+                            <div hidden class="text-danger" id="advTelefono"><p>Ingrese el teléfono</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" >Nombre y Apellidos</label>
+                            @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @type = "text", @class = "form-control ", @id = "nombre" } })
+                            <div hidden class="text-danger" id="advNombre"><p>Ingrese el nombre</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02" >Correo Electrónico</label>
+                            @Html.EditorFor(model => model.mail, new { htmlAttributes = new { @type = "text", @class = "form-control ", @id = "mail" } })
+                            <div hidden class="text-danger" id="advCorreo"><p>Ingrese el correo</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationDefault01" >Detalle Ticket</label>
+                            @Html.TextAreaFor(model => model.detalle, new { @class = "form-control ", @id = "detalle", @rows = "5" })
+                            <div hidden class="text-danger" id="advDetalle"><p>Ingrese el detalle del ticket</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01">Tipo de Ticket</label>
+                            @Html.DropDownList("idTipo", null, "Seleccione Una Opción", htmlAttributes: new { @class = "custom-select ", @id = "idTipo" })
+                            <div hidden class="text-danger" id="advTipo"><p>Seleccione el tipo de tikect</p> </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01" >Subir Archivo</label>
+                            <input type="file" name="postedFile" class="form-control " id="archivo" />
+                            <div hidden class="text-danger" id="advArchivo"><p>Seleccione el archivo</p> </div>
+                        </div>
+                    </div>
+                    <div class="form-row pt-5">
+                        <div class="col-md-4 mb-3 offset-sm-8" style="text-align:right">
+                            <a href="@Url.Action("Login", "Auth")" id="btn-one" class="btn btn-primary "> <i class="fa fa-arrow-circle-left"></i> Regresar</a>
+                            <button type="submit" id="btn-one" class="btn btn-success "><i class="fas fa-plus-circle"></i> Crear Ticket</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/Script/scriptTickets.js"></script>
+</body>
+</html>

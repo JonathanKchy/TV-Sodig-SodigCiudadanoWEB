@@ -1,0 +1,384 @@
+﻿
+
+
+@{
+    ViewBag.Title = "SUBIR DOCUMENTO DE IDENTIDAD |";
+}
+
+<link href="~/Content/css/Responsive.css" rel="stylesheet" />
+
+<style>
+    #videoElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+
+    #canvasElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+</style>
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="selected" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-pasos"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="row">
+            <div class="col-md-3 pl-5 pr-5"> </div>
+            <div class="col-md-6 pl-5 pr-5">
+                <div hidden id="mensajeAlerta" class="alert alert-danger">
+                    Texto Prueba
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 pl-5 pr-5"> </div>
+            <div class="col-md-6 pl-5 pr-5">
+                <div hidden id="mensajeAlertaSuccess" class="alert alert-success">
+                    Texto Prueba
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-2 pb-5">
+            <div class="col-md-12 pl-5 pr-5">
+                <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+            </div>
+            <div class="col-md-12" style="text-align:center">
+                @{
+                    string texto = "Identificación ";
+                    if (ViewBag.tipoIdentificacion == "1")
+                    {
+                        texto = "Cédula ";
+                    }
+                    else if (ViewBag.tipoIdentificacion == "2")
+                    {
+                        texto = "Pasaporte";
+                    }
+                }
+            </div>
+            <br />
+            <span class="section pb-3 pl-4"><i class="fas fa-address-card"> </i> Captura de Documentos de Identificación</span>
+
+        </div>
+        <div class="div-registro3">
+            <div class="pt-2 pl-5 pt-5" id="btn-web">
+                <div class="  pl-5 profile_view col-md-12">
+                    <div class="col-sm-12" id="exploradorArchivos" hidden>
+                        <a href="#" onclick="mostrar();" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                            <i class="fas icons fa-folder-open"></i> &nbsp;   Tomar Fotografía
+                        </a>
+                    </div>
+                    <div class="col-sm-12" id="camara">
+                        <a onclick="mostrarCamara();" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                            <i class="fas  fa-video"></i> &nbsp;  Activar Cámara Web
+                        </a>
+                        <a onClick="history.back()" style="background:#07577A" class="btn text-white btn-sm btn-block">
+                            <i class="fa fa-arrow-circle-left"></i> &nbsp;  Regresar Paso Anterior
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Img Precaucion-->
+            <div id="img-preca">
+                <img src="~/Content/images/precaucion.png" alt="" width="60%">
+            </div>
+
+            <!--Subir por Achivo-->
+            <div class="pt-5" id="flotante" style=" display: none;">
+                <div id="close">
+                    <span class="section pb-3 pl-4"><i class="fas fa-upload"></i> Subir Archivo de Identidad : @texto <a href="javascript:cerrar();"><i class="far red fa-times-circle"></i></a></span>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 pl-5 pr-5">
+                    </div>
+                    <div class="col-md-6 pl-5 pr-5">
+                        <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                    </div>
+                </div>
+                <br />
+                @using (Html.BeginForm("CapturaCedulaFrontalArchivo", "CapturaDocumento", FormMethod.Post, new { onsubmit = "return validar()", enctype = "multipart/form-data" }))
+                {
+                    <!-- <span class="section pb-3  pl-4" style="text-align:center">Subir Archivo de  Cédula Parte Frontal / Posterior </span>-->
+
+                    <div class="row" id="frontal">
+                        <img src="~/Content/images/cedulafrontal.png" id="capture" alt="" width="60%" style="margin-left:20%">
+                        <div class="col-md-12 pt-5" style="text-align:center">
+                            <label for="postedFile" class="subir btn  btn-icon rounded-pill">
+                                <i class="fa fa-cloud-upload-alt" id="cloud"></i> Subir parte Frontal
+                            </label>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input onclick="validarArchivo()" accept=".png, .jpg, .jpeg, .pdf" id="postedFile" name="postedFile" onchange='cambiar()' type="file" style='display: none;' />
+                        </div>
+
+                        <div class="col-md-12">
+                            <div id="info"></div>
+                        </div>
+
+                        <div class="col-md-12" style="text-align: center;">
+                            <label id="mensajeTérmino" style="font-size:14px;" hidden class="col-form-label text-danger  label-align">Por favor, Seleccione un archivo</label>
+                        </div>
+
+                    </div>
+                    <div class="row" id="posterior">
+                        <img src="~/Content/images/cedulaposterior.jpg" id="capture" alt="" width="60%" style="margin-left:20%">
+
+                        <div class="col-md-12 pt-5" style="text-align:center">
+                            <label for="postedFilePosterior" class="subir btn  btn-icon rounded-pill">
+                                <i class="fa fa-cloud-upload-alt" id="cloud"></i> Subir para Posterior
+                            </label>
+                            <!-- <button type="submit" id="btn-checkPost"> <i class="fas fa-check-circle" id="check"></i></button>-->
+                        </div>
+
+                        <div class="col-md-12">
+                            <input onclick="validarArchivoPost()" accept=".png, .jpg, .jpeg, .pdf" id="postedFilePosterior" name="postedFilePosterior" onchange='cambiarPost()' type="file" style='display: none;' />
+                        </div>
+
+                        <div class="col-md-12">
+                            <div id="infoPost"></div>
+                        </div>
+                        <div class="col-md-12" style="text-align:center">
+                            <label id="mensajeTérmino2" style="font-size:14px;" hidden class="col-form-label text-danger  label-align"> Por favor, Seleccione un archivo</label>
+                        </div>
+                        <br />
+                    </div>
+                    <button type="button" id="btn-one" class="btn btn-success" onClick="history.back()"> <i class="fa fa-arrow-circle-left"></i> Regresar </button>
+                    <button type="submit" id="btn-one" class="btn btn-success"> Continuar <i class="fas fa-check-circle"></i></button>
+                }
+            </div>
+            <!--Fin div Subir archivo-->
+            <!--Div Camara Web Frontal-->
+            <div id="flotanteCamara" style="display:none">
+                <!--<div id="close">
+                <span class="section pb-3 pl-4"> </span>
+            </div>-->
+                <br>
+                <div class="row">
+                    <div class="col-md-12 pt-1" style="text-align: center;">
+                        <img src="~/Content/images/advertencia.png" id="alertCam" /><br /><br />
+                        <!--  <a class="btn cam text-white" onClick="history.back()" id="btnRegre" hidden:false><i class="fa fa-arrow-circle-left"></i> Regresar </a>-->
+                        <a class="btn cam text-white" onclick="iniciarVideo()" id="btnIniciarCamara"> <i class="fas fa-camera"></i> Iniciar Cámara</a>
+                    </div>
+                    <div class="col-md-12 pt-5"   id="post" hidden>
+                        <img src="~/Content/images/advertencia.png"  id="alertCamPost" /><br />
+                        <a class="btn cam  text-white" onclick="iniciarVideoPost()" id="btnIniciarCamaraPost"> <i class="fas fa-camera"></i> Iniciar Cámara</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="~/Content/images/info.png" alt="" id="infoCapt" hidden>
+
+        <div class="row">
+            <div class="col-md-12 pt-2" id="panelVideo" hidden>
+                <h2>Por favor, acerque su cédula frontal hacia la cámara</h2>
+                <div class="col-sm-12 video">
+                    <video id="canvasElement1" width="350" height="310" autoPlay class="js-video"></video>
+                </div>
+                <br />
+                <div class="col-md-12 pt-0 btn-video" style="text-align:center">
+                    <a onclick="apagarVideo()" style="width:110px; cursor:pointer" class="btn btn-primary text-white "><i class="fas fa-power-off"></i> </a>
+                    <a class="btn cam text-white" style="width:110px;" id="alertbox" cursor:pointer" onclick="capturarImagen(1)"><i class="fas fa-camera"></i></a>
+                </div>
+
+                <div class="col-md-12">
+                    <canvas width="330" height="350" hidden autoPlay class="js-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="imgceduFront" hidden>
+            <img src="~/Content/images/cedulafrontal.png" alt="" id="camFront">
+
+            <a onClick="history.back()"  class="btn text-white btn-sm btn-block">
+                <i class="fa fa-arrow-circle-left"></i> &nbsp;  Regresar Paso Anterior
+            </a>
+        </div>
+
+
+        <div class="row" id="CaptureFrontal">
+            <div class="col-md-12 pt-2" style="text-align:center">
+                <div className="col-md-6" id="panelCaptura" hidden>
+                    <h2> <i class="fas fa-id-card"></i> Cédula Frontal Capturada</h2>
+                    <form>
+                        <div className="form-group">
+                            <div class="col-sm-12" style="height:270px;">
+                                <img src="" id="photo" name="file1" />
+                            </div>
+                            <div class="col-md-12 pt-0" style="text-align:center">
+                                <a class="btn btn-primary text-white" style="width:200px; cursor:pointer" onclick="iniciarVideo()"><i class="fas fa-camera"></i> Capturar Otra Imagen</a>
+                                <button onclick="analizarImagen()" id="btn-one1" style="width:100px" class="btn  btn-success text-white">Continuar <i class="fas fa-arrow-circle-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <img src="~/Content/images/cedulafrontal.png" alt="" width="30%" id="camFront" style="margin-top:3%;display: none">
+            </div>
+        </div>
+        <!--Fin Div Camara Web Frontal-->
+        <!--Div Camara Web Posterior-->
+
+        <div id="flotanteCamPost">
+            <!--PanelVideoPost-->
+            <div class="row">
+                <div class="col-md-12 pt-2" id="panelVideoPost" hidden>
+                    <h2>Por favor, acerque su cédula posterior hacia la cámara</h2>
+                    <div class="col-sm-12 videoPost">
+                        <video width="350" height="410" id="canvasElement1" autoPlay class="js-videoPost"></video>
+                    </div>
+                    <div class="col-md-12 pt-0 btn-videoPost" style="text-align:center">
+                        <a onclick="apagarVideoPost()" style="width:110px; cursor:pointer" class="btn btn-primary text-white "><i class="fas fa-power-off"></i> </a>
+                        <a class="btn cam text-white" style="width:110px; cursor:pointer" id="alertbox2" onclick="capturarImagenPost()"><i class="fas fa-camera"></i></a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <canvas width="330" height="350" hidden autoPlay class="js-canvaspost"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="imgceduPost" hidden>
+                <img src="~/Content/images/cedulaposterior.jpg" alt="" id="camPost">
+                <a onClick="history.back()"  class="btn text-white btn-sm btn-block ">
+                    <i class="fa fa-arrow-circle-left"></i> &nbsp;  Regresar Paso Anterior
+                </a>
+            </div>
+            <!--CapturePost-->
+
+            <div class="row" id="CapturePost">
+                <div class="col-md-12 pt-2" style="text-align:center">
+                    <div className="col-md-12" id="panelCapturaPost" hidden>
+                        <h2> <i class="fas fa-id-card"></i> Cédula Posterior Capturada</h2>
+                        <form>
+                            <div className="form-group">
+                                <div class="col-sm-12" style="height:270px;">
+                                    <img src="" id="photo2" name="file1" />
+                                </div>
+                                <div class="col-md-12 pt-0" style="text-align:center">
+                                    <a class="btn btn-primary text-white" style="width:200px;" cursor:pointer" onclick="iniciarVideoPost()"><i class="fas fa-camera"></i> Capturar Otra Imagen</a>
+                                    <button onclick="analizarImagenPosterior()" id="btn-one2" style="width:100px" class="btn  btn-success text-white">Continuar <i class="fas fa-arrow-circle-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <img src="~/Content/images/cedulaposterior.jpg" alt="" width="38%" id="camPost" style="display:none">
+                </div>
+            </div>
+
+
+        </div>
+        <!--Fin Div Camara Web Posterior-->
+
+
+    </div>
+
+    <!-- Modal 
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><i class="fas fa-info"></i> Información importante</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="error"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar <i class="fas fa-times-circle"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Script/scriptCapturaCedulaCamara.js"></script>
+    <script src="~/Scripts/Script/scriptCapturaCedulaArchivo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var movil = getMobileOperatingSystem();
+            if (movil) { 
+                var exploradorArchivos = document.getElementById('exploradorArchivos');
+                exploradorArchivos.hidden = true;
+
+            }
+        });
+
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/windows phone/i.test(userAgent)) {
+                return true
+            }
+
+            if (/android/i.test(userAgent)) {
+                return true
+            }
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return true
+            }
+
+            return false
+        }
+
+    </script>
+   
+}

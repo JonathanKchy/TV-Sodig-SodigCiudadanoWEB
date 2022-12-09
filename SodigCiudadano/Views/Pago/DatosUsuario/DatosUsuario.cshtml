@@ -1,0 +1,259 @@
+﻿@model SodigCiudadano.Models.Entidades.Datos
+@{
+    ViewBag.Title = "Datos Del Usuario";
+}
+
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="done" isdone="1" rel="1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Tipo Solicitud</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="done" isdone="1" rel="2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Tipo Contenedor</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="done" isdone="1" rel="3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Tipo Documento</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no">5</span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+
+            @using (Html.BeginForm("DatosUsuario", "DatosUsuario", FormMethod.Post, new { onsubmit = "return validar()" }))
+            {
+                <div>
+                    @Html.HiddenFor(x => x.Solicitud.IdSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.CodigoSolicitante)
+                    @Html.HiddenFor(x => x.Solicitud.Fecha)
+                    @Html.HiddenFor(x => x.Solicitud.Identificacion)
+                    @Html.HiddenFor(x => x.Solicitud.IdEstado)
+                    @Html.HiddenFor(x => x.Solicitud.IdMotivoSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.IdTipoContenedor)
+                    @Html.HiddenFor(x => x.Solicitud.IdTipoSolicitud)
+                    @Html.HiddenFor(x => x.Solicitud.Ip)
+
+                    @Html.HiddenFor(x => x.Cliente.Identificacion)
+                    @Html.HiddenFor(x => x.Cliente.IdTipoElector)
+                    @Html.HiddenFor(x => x.Cliente.PrimerNombre)
+                    @Html.HiddenFor(x => x.Cliente.PrimerApellido)
+                    @Html.HiddenFor(x => x.Cliente.SegundoApellido)
+                    @Html.HiddenFor(x => x.Cliente.SegundoNombre)
+                    @Html.HiddenFor(x => x.Cliente.Actividad.IdActividad)
+                    @Html.HiddenFor(x => x.Cliente.Elector)
+
+                    @Html.HiddenFor(x => x.Cliente.IdTipoIdentificacion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdDireccion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[0].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdDireccion)
+                    @Html.HiddenFor(x => x.Cliente.Direcciones[1].IdSolicitud)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[0].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[1].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[2].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[3].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[4].IdTipoContacto)
+
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdSolicitud)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].Extension)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdCategoria)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdContacto)
+                    @Html.HiddenFor(x => x.Cliente.Telefonos[5].IdTipoContacto)
+                </div>
+
+                <span class="section pb-3 pl-5">Datos del Solicitante</span>
+                <div class="container">
+                    <div class="col-md-4">
+                        <label>RUP</label>
+                        @Html.EditorFor(model => model.Cliente.Actividad.Rup, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+                    <div class="col-md-4">
+                        <label>RUC</label>
+                        <label hidden style="font-size:13px; color:red;">
+                            Ingrese un ruc válido
+                        </label>
+                        @Html.EditorFor(model => model.Cliente.Actividad.Ruc, new { htmlAttributes = new { @class = "form-control " } })
+
+                    </div>
+                    <div class="col-md-4 ">
+                        <label>ACTIVIDAD ECONÓMICA</label>                       
+                        @Html.DropDownListFor(x => x.Cliente.Actividad.IdActividadEconomica, new SelectList(ViewBag.idActividadEconomica, "idActividadEconomica", "actividadEconomica"), "Seleccione una opción", new { @class = "form-control", @required = "required", @id = "idActividadEconomica" })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>PAÍS DOMICILIO</label>                             
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdPais, new SelectList(ViewBag.idPais, "idPais", "pais", Model.Cliente.Direcciones[0].IdPais), "Seleccione una opción", new { @class = "form-control", @required = "required", @id = "paisDomicilio" })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>PROVINCIA DOMICILIO</label>                        
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdProvincia, new SelectList(ViewBag.idProvincia, "idProvincia", "provincia", Model.Cliente.Direcciones[0].IdProvincia), "Seleccione una opción", new { @class = "form-control", @required = "required", @id = "provinciaDomicilio" })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>CIUDAD DOMICILIO</label>
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[0].IdCiudad), "Seleccione una opción", new { @class = "form-control", @required = "required", @id = "ciudadDomicilio" })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>DIRECCIÓN DOMICILIO</label>
+                        @Html.EditorFor(model => model.Cliente.Direcciones[0].direccion, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>SECTOR DOMICILIO</label>
+                        @Html.EditorFor(model => model.Cliente.Direcciones[0].Sector, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>TELÉFONO DOMICILIO</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[0].Contacto, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>CELULAR</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[1].Contacto, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>CORREO ELECTRÓNICO PRINCIPAL</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[2].Contacto, new { htmlAttributes = new { @class = "form-control ", @type = "email", @required = "required" } })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>CORREO ELECTRÓNICO ALTERNATIVO</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[3].Contacto, new { htmlAttributes = new { @class = "form-control ", @type = "email", @required = "required" } })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>PAÍS OFICINA</label>                        
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdPais, new SelectList(ViewBag.idPais, "idPais", "pais", Model.Cliente.Direcciones[1].IdPais), "Seleccione una opción", new { @class = "form-control", @id = "paisOficina" })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>PROVINCIA OFICINA</label>                        
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[1].IdProvincia, new SelectList(ViewBag.idProvincia, "idProvincia", "provincia", Model.Cliente.Direcciones[1].IdProvincia), "Seleccione una opción", new { @class = "form-control", @id = "provinciaOficina" })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>CIUDAD OFICINA</label>
+                        @Html.DropDownListFor(x => x.Cliente.Direcciones[1].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[1].IdCiudad), "Seleccione una opción", new { @class = "form-control", @id = "ciudadOficina" })                        
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>DIRECCIÓN OFICINA</label>
+                        @Html.EditorFor(model => model.Cliente.Direcciones[1].direccion, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>TELÉFONO OFICINA</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[4].Contacto, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+                    <div class="col-md-4 pt-3">
+                        <label>EXTENSIÓN</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[4].Extension, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+
+                    <div class="col-md-4 pt-3">
+                        <label>FAX</label>
+                        @Html.EditorFor(model => model.Cliente.Telefonos[5].Contacto, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+                    <div class="col-md-8 pt-3">
+                        <label class="text-center">USO CERTIFICADO</label>
+                        <div class="row">
+                            @foreach (var item in ViewBag.listaUsoCertificado)
+                            {
+                                <div class="col-md-2 pt-3">
+                                    <div class="checkbox">
+                                        <label style="font-size:13px;">
+                                            @{string value = item.idUsoCertificado;}                                            
+                                            @Html.RadioButtonFor(x => x.Solicitud.IdUsoCertificado, value) @item.usoCertificado
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <label id="advertenciaUsoCertificado" hidden style="font-size:13px; color:red;">
+                            Para continuar, por favor, seleccione una opción.
+                        </label>
+                    </div>
+
+                    <div class="col-md-12 pt-3 pb-5" style="text-align:right">
+                        <button type="submit" class="btn btn-success">Aceptar</button>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Script/ScriptFormulario.js"></script>
+}
+
+

@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Proceso Finalizado";
+}
+
+
+
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div> 
+            <span class="section pb-3"> <i class="fas fa-check-circle"></i> Proceso Final</span>
+            <br />
+
+            <div class="div-registro">
+
+                <div>
+                    <form class="pt-0" action="" method="post" novalidate="">
+                        <div class="form-group">
+                            <img class="logo" src="~/Content/images/check.png" width="50px"/>
+                            <br />
+                            <label ><strong>Proceso Finalizado Correctamente.</strong></label>
+                        </div>
+
+                    </form>
+                </div>
+                <div >
+                    <form class="pt-0" action="" method="post" novalidate="">
+                        <div >
+                            <label><strong>¡Solicitud de <span style="color: #17bde1 "> @ViewBag.nombreProceso</span> terminada exitosamente!	</strong></label>
+					<label>A su correo electrónico registrado le llegará un mail con las instrucciones a seguir en el portal del Banco Central del Ecuador.</label>
+                            <br />
+                            <br />
+                            @if(ViewBag.showMessage)
+                            {
+                                <label>"Se recuerda al usuario que a partir del segundo olvido de clave el valor a pagar es de $@ViewBag.precio".</label>
+                            }
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+ 
+}

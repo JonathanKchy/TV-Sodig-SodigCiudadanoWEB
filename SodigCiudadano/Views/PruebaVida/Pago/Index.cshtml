@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Pago";
+}
+
+<link href="~/Content/css/EstilosModal.css" rel="stylesheet" />
+<div class="container mt-5">
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="done" isdone="1" rel="1">
+                    <span class="step_no">1</span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Tipo Solicitud</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="done" isdone="1" rel="2">
+                    <span class="step_no">2</span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Tipo Contenedor</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="done" isdone="1" rel="3">
+                    <span class="step_no">3</span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Tipo Documento</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="done" isdone="1" rel="4">
+                    <span class="step_no">4</span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="selected" isdone="1" rel="4">
+                    <span class="step_no">5</span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Pago</small>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="pt-5">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5"></div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div>@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
+                </div>
+            </div>
+
+
+            @using (Html.BeginForm("Pago", "Pago", FormMethod.Post, new { onsubmit = "return validar()" }))
+            {
+                <span class="section pb-3 pl-5">Pago</span>
+                
+                <div class="form-group pt-3" style="text-align:center">
+                    <div class="col-md-6 offset-md-3">
+                        <button type="submit" class="btn btn-success">Realizar El Pago</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Script/ScriptDatosUsuario.js"></script>
+}

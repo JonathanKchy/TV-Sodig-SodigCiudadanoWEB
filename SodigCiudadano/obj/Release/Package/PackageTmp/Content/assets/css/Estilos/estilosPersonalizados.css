@@ -1,0 +1,50 @@
+﻿.fondoLogin {
+   background-color:#1a232d;
+}
+
+
+.letraNegra {
+    color:black;
+}
+
+.letraBlanca {
+    color: white;
+}
+
+.fondoNaranja {
+    background-color: #ffab00;
+}
+
+.caraFeliz {
+    color:#4cc920;
+    font-size:30px;
+}
+
+.caraTriste{
+    color: red;
+    font-size: 30px;
+}
+
+.puntero {
+    cursor:pointer;
+}
+
+.punteroDefault {
+    cursor: default !important;
+}
+
+.itemSeleccionado {
+    background-color: lightgray;
+}
+
+.textDerecha {
+   text-align:right;
+}
+
+.textCentro {
+    text-align: center;
+}
+
+.fontSize16{
+    font-size:16px;
+}

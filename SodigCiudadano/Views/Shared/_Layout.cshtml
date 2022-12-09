@@ -1,0 +1,134 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link rel="icon" href="images/favicon.ico" type="image/ico" />*@
+
+    <title>@ViewBag.Title FACTURACION ELECTRONICA |SODIG S.A! </title>
+    <!-- Bootstrap -->
+
+    <link href="~/Vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <!-- NProgress -->
+    <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+
+    <link href="~/Vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="~/Vendors/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Custom Theme Style -->
+
+    <link href="~/Content/css/custom.min.css" rel="stylesheet" />
+    <link href="~/Content/css/Estilos.css" rel="stylesheet" />
+    <link href="~/Content/css/Responsive.css" rel="stylesheet" />
+
+    @RenderSection("styles", required: false)
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body class="nav-md" style="background: #0c112f">
+
+    <div class="container body">
+        <div class="main_container">
+
+            <!---->
+            <!-- top navigation -->
+            <div class="top_nav" style="margin-left:0px">
+                <div class="nav_menu">
+                    <a href="/"><img class="logo" src="~/Content/images/TufirmaEc.png" width="120px" /> </a>&nbsp; &nbsp;
+                    <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/logobce.png" width="150px" /></a>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile " aria-haspopup="true" id="navbarDropdown"  aria-expanded="false">
+                                    <img src="~/Content/images/user1.png" alt=""><span class="welcom">Bienvenido</span> @Session["Identificacion"]
+                                </a>                          
+                                <div style="text-align:right">
+                                    <a href="@Url.Action("Logout", "Auth")" >  Cerrar Sesión <i class="fas fa-sign-out-alt"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main" style="margin-left:0px">
+                @RenderBody()
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="~/Vendors/jquery/jquery.min.js"></script>
+    <script src="~/Vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Vendors/nprogress/nprogress.js"></script>
+
+    <script src="~/Vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+
+    <script src="~/Vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+
+    <!-- Flot -->
+    <script src="~/Vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Vendors/Flot/jquery.flot.resize.js"></script>
+
+    <!-- Flot plugins -->
+    <script src="~/Vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Vendors/flot.curvedlines/curvedLines.js"></script>
+
+    <!-- DateJS -->
+    <script src="~/Vendors/DateJS/build/date.js"></script>
+
+    <script src="~/Vendors/moment/min/moment.min.js"></script>
+    <script src="~/Vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="~/Content/js/custom.js"></script>
+    <!--Script-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20528418.js"></script>
+    <!-- End of HubSpot Embed Code -->
+
+
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            $("#mostrarmodal").modal("show");
+
+        });
+    </script>
+
+</body>
+</html>

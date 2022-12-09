@@ -1,0 +1,443 @@
+﻿@model SodigCiudadano.Models.Entidades.DialogoResponse
+@{
+    ViewBag.Title = "Prueba de Vida";
+}
+
+<style>
+    #videoElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+
+    #canvasElement1 {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+
+    #video {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+        -moz-transform: rotateY(180deg); /* Firefox */
+    }
+</style>
+
+
+<link href="~/Content/css/EstilosModalRechazo.css" rel="stylesheet" />
+<link href="~/Content/css/EstilosModalSuccess.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="container mt-5">
+
+    <!--Modal Img-->
+    <div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modalPrueba">
+            <img src="~/Content/images/validacion.png" style="box-shadow: 0px 15px 25px 15px rgb(0,0,0, 0.7);" width="100%" />
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal-->
+
+    <div id="wizard" class="pt-5 form_wizard wizard_horizontal">
+        <ul class="wizard_steps anchor">
+            <li>
+                <a href="#step-1" class="disabled" isdone="1" rel="1">
+                    <span class="step_no"> <i class="fas fa-user" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 1<br>
+                        <small>Formulario</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-2" class="disabled" isdone="1" rel="3">
+                    <span class="step_no"> <i class="fas fa-address-card" id="icon-up"></i></span>
+                    <span class="step_descr">
+                        Paso 2<br>
+                        <small>Captura Documentos</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-3" class="selected" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-user-shield" id="icon-pasos"></i></span></span>
+                    <span class="step_descr">
+                        Paso 3<br>
+                        <small>Validación Identidad</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-money-bill" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 4<br>
+                        <small>Pago Online</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#step-4" class="disabled" isdone="1" rel="4">
+                    <span class="step_no"> <span class="step_no"> <i class="fas fa-certificate" id="icon-up"></i></span></span>
+                    <span class="step_descr">
+                        Paso 5<br>
+                        <small>Emisión de Certificado BCE</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="pt-5" id="div-PruebaVida">
+            <div class="row">
+                <div class="col-md-3 pl-5 pr-5">
+                    @Html.Partial("~/Views/Shared/_Flash.cshtml")
+                </div>
+                <div class="col-md-6 pl-5 pr-5">
+                    <div hidden id="mensajeAlerta" class="alert alert-danger">
+                        Texto Prueba
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <span class="section text-left pl-4"><i class="fas fa-user-lock"></i> Validación de Identidad </span>
+                <div class="col-md-12 pt-1" style="text-align:left">
+                    <!--Div Agent Virtual-->
+                    <div class="col-md-3 pt-3" style="text-align:center">
+                        <img src="~/Content/images/recom2.png" width="300px" />
+                    </div>
+                    <!--Fin Agent Virtual-->
+                    <!--Div Video-->
+                    <br />
+                    <br />
+                    <div class="col-md-5" id="cuadrado">
+                        <video muted="muted" id="video" width="80%" style=" border: solid 2px gray; background: #5a5454; margin-left: 10%; box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 40%); ">
+                            <canvas width="330" height="350" id="canvasElement1" autoPlay class="js-canvas"></canvas>
+                        </video>
+                        <i class="fas fa-video" id="play" style="font-size:20px" hidden:false></i>
+                        <!--<h2 id="title" style="text-align:center;display:block">Comenzar a Grabar</h2>-->
+                        <div id="panelVideoGrabado" hidden>
+                            <video controls="controls" id="videoGrabado">
+                                <source id="source" />
+                            </video>
+                            <br />
+                            <button id="btnContinuar" class="btn cam  text-white" onclick="iniciarVideoCapt()">Continuar <i class="fas fa-arrow-circle-right"></i></button>
+
+                        </div>
+                        <p id="duracion"></p>
+                        <!--BTN Pryeba de Vida-->
+                        <div class="col-md-12 pt-1" style="margin-left: 6%;">
+                            <div class="col-md-4" style="margin-top: -1%;">
+                                <!--   <label for="dispositivosDeAudio"><i class="fas fa-microphone" style="font-size:20px"></i></label>&nbsp; &nbsp;-->
+                                <select class="form-control form-control-sm" name="dispositivosDeAudio" id="dispositivosDeAudio" hidden></select>
+                                <!--  <label for="dispositivosDeVideo"><i class="fas fa-video" style="font-size:20px"></i></label>&nbsp;-->
+                                <button class="btn btn-one" id="btnDetenerGrabacion" hidden><i class="fas fa-stop"></i> Detener</button>
+                                <select class="form-control form-control-sm" name="dispositivosDeVideo" id="dispositivosDeVideo" hidden></select>
+                                <button class="btn btn-one" id="btnComenzarGrabacion"><i class="fas fa-play"></i> Grabar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin Div Video-->
+                    <!-- Div Texto-->
+                    <div class="col-md-4 pt-3" style="text-align:center">
+                        <img src="" id="photo" hidden name="file1" />
+                        <label for="dispositivosDeAudio" style="font-size:24px">Lea el siguiente texto</label><br>
+                        <div class="textPV">
+                            @*<label for="dispositivosDeAudio">@Model.obj.dialogo</label><br>*@
+                            <label for="dispositivosDeAudio">
+                                Yo , <u id="subra"> @ViewBag.primerNombre @ViewBag.segndoNombre @ViewBag.primerApellido @ViewBag.segundoApellido</u>
+                                con cédula de identidad número <u id="subra"> @ViewBag.identificacion </u>  y hoy con fecha <input id="fecha" name="fecha" /> autorizo al Banco Central
+                                del Ecuador a que emita mi certificado de firma electrónica en archivo con duración de <u id="subra">dos(2) años</u>.
+                            </label>
+
+                        </div>
+                        <br />
+                    </div>
+                    <!--Fin Div Texto-->
+                </div>
+            </div>
+        </div>
+        <!--Div Capture Photo-->
+        <div id="flotanteCaptPhoto">
+            <div class="col-md-12 pl-5 pr-5">
+                <div hidden id="mensajeAlerta1" class="alert alert-danger">
+                    Texto Prueba
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <!--Panel de Captura-->
+            <span class="section text-left pl-4"> <i class="fas fa-camera-retro"></i> Captura de Foto Personal</span>
+
+
+
+            <!--Agent Capt-->
+            <div class="col-md-3 pt-3" style="text-align:center;margin-top:30px" id="Agent" hidden:false>
+                <img src="~/Content/images/recom1.png" width="300px" />
+
+            </div>
+
+            <img src="~/Content/images/rec.png" hidden id="imagenCanvasCapt" />
+            <!--Fin Agent-->
+            <div class="col-md-6 pt-2" style="text-align:center;margin-top:20px" id="panelVideoCapt" hidden>
+                <div class="col-md-12">
+                    <video width="50%" id="videoElement1" autoplay class="js-video"></video>
+                </div>
+                <div class="col-sm-12" style="height:270px;position:absolute">
+                    <canvas width="330" height="350" autoPlay class="js-canvas"></canvas>
+                </div>
+
+                <div class="col-md-12 pt-0" style="text-align:center">
+                    <a class="btn cam text-white" style="width:150px; cursor:pointer" onclick="capturarImagenCapt()"><i class="fas fa-camera"></i></a>
+                    <!--  <a onclick="apagarVideoCapt()" style="width:150px; cursor:pointer" class="btn btn-primary text-white "><i class="fas fa-power-off"></i> </a>-->
+                </div>
+            </div>
+
+            <div class="col-md-3 pt-3" style="text-align:center" id="capture1" hidden:false>
+                <img src="~/Content/images/capture.png" width="200px" id="perfil" />
+            </div>
+
+            <!--Fin Panel de Captura-->
+            <!--Foto Capturada-->
+            <div class="col-md-6 pt-2">
+                <div class="col-md-12 pt-2" style="text-align:center;margin-top:20px">
+                    <div className="col-md-12" id="panelCapturaCapt" hidden>
+                        <form>
+                            <div className="form-group">
+                                <div class="col-sm-12" style="height:270px;">
+                                    <img src="" id="photoCapt" name="file1" />
+                                </div>
+                                <div class="col-md-12 pt-0" style="text-align:center">
+                                    <a class="btn btn-primary text-white" style="width:200px; cursor:pointer" onclick="iniciarVideoCapt()">Capturar Otra Imagen <i class="fas fa-camera"></i></a>
+                                    <button onclick="subirImagen()" id="btn-oneImagen" style="width:100px" class="btn btn-success text-white">Aceptar <i class="fas fa-check-circle"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Fin -->
+
+            <div class="col-md-3 pt-3" style="text-align:center" hidden id="perfil2">
+                <img src="~/Content/images/capture.png" width="200px" id="perfil" />
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="success_tic" data-backdrop="static" class="modal fade" role="dialog">
+        <<div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                @*<a class="close" href="#" data-dismiss="modal">&times;</a>*@
+                <div class="page-body">
+                    <h1 style="text-align:center;" />
+                    <div class="checkmark-circle">
+                        <div class="background"></div>
+                        <div class="checkmark draw"></div>
+                    </div>
+                    <div class="head">
+                        <h4 style="margin-top:5px;">Identificación Validada</h4>
+                        <h4 style="margin-top:5px;">Reconocimiento Facial Aprobado</h4>
+                        <div class="pt-3">
+                            <button onclick="onClickAceptar()" class="btn btn-success">Aceptar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+<div id="myModal" data-backdrop="static" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header flex-column">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <h4 class="modal-title w-100">Registro de Biometría Rechazado</h4>
+            </div>
+            <div class="modal-body">
+                <p id="textoRechazado">Los documentos capturados no coinciden con los registros oficiales.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" onclick="onClickRechazar()" class="btn btn-danger">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @section Scripts {
+        <script type="module" src="~/Scripts/Script/ScriptVideo.js"></script>
+        <script type="module" src="~/Scripts/Script/scriptCapturaCedulaCamara.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.alert').fadeIn();
+                setTimeout(function () {
+                    $(".alert").fadeOut();
+                }, 15000);
+            });
+
+            $(document).ready(function () {
+
+                var now = new Date();
+
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+                var today = (day) + "-" + (month) + "-" + now.getFullYear();                  
+                $("#fecha").val(today);
+            });
+        </script>
+
+        <script>
+
+            function mensajes(estado, mensaje) {
+                $('#btn-oneImagen').html('<span role="status" aria-hidden="true"></span>Continuar').attr('disabled', false);
+                let mensajeAlerta = document.querySelector('#mensajeAlerta');
+                mensajeAlerta.hidden = estado;
+                mensajeAlerta.innerHTML = mensaje;
+                setTimeout(function () {
+                    mensajeAlerta.hidden = true;
+                }, 15000);
+            }
+
+
+            async function iniciarVideoCapt(marco = 0) {
+                try {
+                    if (marco !== 0) {
+                        const panelRecomendaciones = document.getElementById('panelRecomendaciones');
+                        panelRecomendaciones.hidden = false;
+                    }
+
+                    const perfil2 = document.getElementById('perfil2');
+                    perfil2.hidden = true;
+                    const capture2 = document.getElementById('capture1');
+                    capture2.hidden =false;
+                    const panelVideoCapt = document.getElementById('panelVideoCapt');
+                    panelVideoCapt.hidden = false;
+                    const panelCapturaCapt = document.getElementById('panelCapturaCapt');
+                    panelCapturaCapt.hidden = true;
+                    const videoContainerCapt = document.querySelector('.js-video')
+                    const canvas = document.querySelector('.js-canvas')
+                    let photo = document.querySelector('#photoCapt')
+                    const context = canvas.getContext('2d')
+                    const video = await navigator.mediaDevices.getUserMedia({ video: true })
+                    let imagenCanvas = document.getElementById('imagenCanvasCapt');
+
+                    videoContainerCapt.srcObject = video
+
+                    const reDraw = async () => {
+                        context.drawImage(videoContainerCapt, 0, 0, 320, 250)
+                        //if (marco === 0) {
+                        //    context.drawImage(imagenCanvas, 5, 5, 310, 240)
+                        //}
+                        requestAnimationFrame(reDraw)
+                    }
+                    requestAnimationFrame(reDraw)
+                } catch (e) {
+                    alert(e);
+                }
+            }
+
+            async function apagarVideoCapt() {
+                const videoContainerCapt = document.querySelector('.js-video')
+
+                let stream = videoContainerCapt.srcObject;
+                let tracks = stream.getTracks();
+
+                await tracks.forEach(function (track) {
+                    track.stop();
+                });
+
+                const Agent = document.getElementById('Agent');
+                Agent.hidden = false;
+
+
+                const panelCapturaCapt = document.getElementById('panelCapturaCapt');
+                panelCapturaCapt.hidden = true;
+            }
+
+            async function capturarImagenCapt(banderaP = 0) {
+
+
+                await apagarVideoCapt();
+
+                const recom1 = document.getElementById('Agent');
+                recom1.hidden = false;
+                const capture2 = document.getElementById('capture1');
+                capture2.hidden = true;
+                const recom2 = document.getElementById('perfil2');
+               recom2.hidden = false;
+
+                const panelVideoCapt = document.getElementById('panelVideoCapt');
+                panelVideoCapt.hidden = true;
+                const panelCapturaPhoto = document.getElementById('panelCapturaCapt');
+                panelCapturaPhoto.hidden = false;
+                const canvas = document.querySelector('.js-canvas')
+                let photo = document.querySelector('#photoCapt')
+                var data = canvas.toDataURL('image/png');
+                photo.setAttribute('src', data);
+            }
+
+            async function subirImagen() {
+                event.preventDefault();
+                let photo = document.querySelector('#photoCapt')
+                var imagen = photo.src
+                $('#btn-oneImagen').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
+                await $.post('/PruebaVida/SubirImagen', {
+                    img: imagen
+                }, function (data, status) {
+                    if (status) {
+                        if (data.estado) {
+                            $('#btn-one').html('Continuar').attr('disabled', false);
+                            esEcuatoriano = data.esEcuatoriano;
+                            $("#success_tic").modal("show");
+                        } else {
+                      
+                            if (!data.resultadoVerificacion) {
+                                $("#myModal").modal("show");
+                                var textoRechazado = document.getElementById('textoRechazado');
+                                textoRechazado.innerText = data.mensaje;
+                            }
+                            else {
+                               
+                                $('#btn-oneImagen').html('<span role="status" aria-hidden="true"></span>Continuar').attr('disabled', false);
+                                let mensajeAlerta = document.querySelector('#mensajeAlerta1');
+                                mensajeAlerta.hidden = false;
+                                mensajeAlerta.innerHTML = data.mensaje;
+                                setTimeout(function () {
+                                    mensajeAlerta.hidden = true;
+                                }, 15000);
+                            }
+                        }
+
+                    } else {
+                        mensajes(false, 'No ha sido posible conectarse al servidor');
+                    }
+                });
+            }
+
+            function onClickAceptar() {
+                //if (esEcuatoriano)
+                //  window.location.replace('/VerificarExcepcion/Index')
+                //else
+                window.location.replace('/DatosUsuario/Index')
+            }
+
+            function onClickRechazar() {
+                window.location.replace('/Home/Index');
+            }
+
+        </script>
+    }
+
+
