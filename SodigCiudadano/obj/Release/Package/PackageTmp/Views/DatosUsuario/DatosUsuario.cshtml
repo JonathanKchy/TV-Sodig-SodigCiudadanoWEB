@@ -145,6 +145,7 @@
                     <span class="section pb-3 pl-5"> <i class="fas fa-user"></i> Datos Personales</span>
                     <br />
                     <div class="row">
+                        <input type='text' value='@Session["Identificacion"]' id='cedulaNueva' hidden />
                         <div class="col-md-4">
                             <label>N° de Identificación </label>
                             @Html.EditorFor(model => model.Solicitud.identificacionFactura, new { htmlAttributes = new { @class = "form-control ", @required = "required" } })
@@ -164,14 +165,14 @@
                             <label>RUP</label>
                             @Html.EditorFor(model => model.Cliente.Actividad.Rup, new { htmlAttributes = new { @class = "form-control " } })
                         </div>
-                        <div hidden class="col-md-4 pt-3">
-                            <label>RUC</label>
-                            <label hidden style="font-size:13px; color:red;">
-                                Ingrese un ruc válido
-                            </label>
-                            @Html.EditorFor(model => model.Cliente.Actividad.Ruc, new { htmlAttributes = new { @class = "form-control " } })
+                        @*<div hidden class="col-md-4 pt-3">
+                                <label>RUC</label>
+                                <label hidden style="font-size:13px; color:red;">
+                                    Ingrese un ruc válido
+                                </label>
+                                @Html.EditorFor(model => model.Cliente.Actividad.Ruc, new { htmlAttributes = new { @class = "form-control " } })
 
-                        </div>
+                            </div>*@
                     </div>
                     <div class="row">
                         <div class="col-md-4 pt-3">
@@ -187,7 +188,7 @@
                         </div>
                         <div class="col-md-4 pt-3">
                             <label>Ciudad Domicilio</label>
-                            @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[0].IdCiudad), "Seleccione una opción", new { @class = "form-control", @id = "ciudadDomicilio", @maxlength="15" })
+                            @Html.DropDownListFor(x => x.Cliente.Direcciones[0].IdCiudad, new SelectList(ViewBag.idCiudad, "idCiudad", "ciudad", Model.Cliente.Direcciones[0].IdCiudad), "Seleccione una opción", new { @class = "form-control", @id = "ciudadDomicilio" })
                             <div class="text-danger" id="advCiudad"><p></p> </div>
                         </div>
 
@@ -236,7 +237,7 @@
                             @*@Html.EditorFor(model => model.Cliente.Telefonos[3].Contacto, new { htmlAttributes = new { @class = "form-control ", @id = "correoAlternativo" } })*@
                             <div class="text-danger" id="advCorreoAlternativo"><p></p> </div>
                         </div>
-                    </div> 
+                    </div>
                     <br />
                     <div class="col-md-12 pt-3" style="margin-top:10px">
                         <br />
@@ -282,13 +283,13 @@
                                 @Html.DropDownList("IdUsoCertificado", null, "Seleccione Una Opción", htmlAttributes: new { @class = "form-control", @multiple = "multiple", @id = "IdUsoCertificado" })
                                 <div class="text-danger" id="advUsoCertificado"><p></p> </div>
                             </div>*@
-                        <div class="col-md-4 pt-3" >
+                        <div class="col-md-4 pt-3">
                             <label>Uso Certificado</label>
-                            <div class="row d-flex " >
-                                <div class="col-md-12" >
+                            <div class="row d-flex ">
+                                <div class="col-md-12">
                                     @Html.DropDownList("IdUsoCertificado", null, htmlAttributes: new { @class = "form-control", @placeholder = "Seleccione una opción", @multiple = "multiple", @id = "IdUsoCertificado" })
                                     <div class="text-danger" id="advUsoCertificado"><p></p> </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -303,6 +304,40 @@
                                 </span>
                             </div>
                         </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 pt-3">
+
+
+                        <div class="col-md-4 pt-3">
+                            <label>¿El certificado digital va a ser usado con facturación electrónica?</label>
+                            <div class="row d-flex ">
+                                <div class="col-md-12">
+                                    <select onchange="onChangeFirma()" class="form-control" id="usoFirmaElectrónica" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="1">Sí</option>
+                                        <option value="2">No</option>
+                                    </select>
+                                    <div class="text-danger" id="advUsoFirmaElectronica"><p></p> </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div hidden class="col-md-4 pt-3" id="panelFirmaCertificado">
+                            <label>RUC</label>
+                            <div class="row d-flex pt-2">
+                                <div class="col-md-12 pt-3">
+                                    @Html.EditorFor(model => model.Cliente.Actividad.Ruc, new { htmlAttributes = new { @class = "form-control ", @readonly = true } })
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
 
                     <div class="col-md-12 pt-3 pb-5" style="text-align:right">
@@ -331,8 +366,22 @@
             });
 
         });
-        
+
+        function onChangeFirma() {
+            let usoFirmaElectrónica = document.getElementById('usoFirmaElectrónica');
+            let panelFirmaCertificado = document.getElementById('panelFirmaCertificado');
+            let Solicitud_identificacionFactura = document.getElementById('cedulaNueva')
+            let Cliente_Actividad_Ruc = document.getElementById('Cliente_Actividad_Ruc')
+
+            if (usoFirmaElectrónica.value == '1') {
+                Cliente_Actividad_Ruc.value = Solicitud_identificacionFactura.value;
+                if (Cliente_Actividad_Ruc.value.trim().length == 10) {
+                    Cliente_Actividad_Ruc.value = Solicitud_identificacionFactura.value + "001";
+                }
+                panelFirmaCertificado.hidden = false;
+            } else {
+                panelFirmaCertificado.hidden = true;
+            }
+        }
     </script>
 }
-
-

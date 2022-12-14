@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 async function actualizarProvincia() {
-    await $.get("/SodigCiudadanoZona6/DatosUsuario/ObtenerListaProvincias?idPais=" + paisDomicilio.value)
+    await $.get("/DatosUsuario/ObtenerListaProvincias?idPais=" + paisDomicilio.value)
         .done(function (response) {
             if (response.estado) {
                 provinciaDomicilio.innerHTML = "";
@@ -56,7 +56,7 @@ async function actualizarProvincia() {
 }
 
 async function actualizarCiudad() {
-    await $.get("/SodigCiudadanoZona6/DatosUsuario/ObtenerListaCiudades?idProvincia=" + provinciaDomicilio.value)
+    await $.get("/DatosUsuario/ObtenerListaCiudades?idProvincia=" + provinciaDomicilio.value)
         .done(function (response) {
             if (response.estado) {
                 ciudadDomicilio.innerHTML = "";
@@ -79,7 +79,7 @@ async function actualizarCiudad() {
 }
 
 async function actualizarProvinciaOficina() {
-    await $.get("/SodigCiudadanoZona6/DatosUsuario/ObtenerListaProvincias?idPais=" + paisOficina.value)
+    await $.get("/DatosUsuario/ObtenerListaProvincias?idPais=" + paisOficina.value)
         .done(function (response) {
             if (response.estado) {
                 provinciaOficina.innerHTML = "";
@@ -105,7 +105,7 @@ async function actualizarProvinciaOficina() {
 }
 
 async function actualizarCiudadOficina() {
-    await $.get("/SodigCiudadanoZona6/DatosUsuario/ObtenerListaCiudades?idProvincia=" + provinciaOficina.value)
+    await $.get("/DatosUsuario/ObtenerListaCiudades?idProvincia=" + provinciaOficina.value)
         .done(function (response) {
             if (response.estado) {
                 ciudadOficina.innerHTML = "";

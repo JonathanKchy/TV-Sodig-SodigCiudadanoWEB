@@ -28,12 +28,13 @@ namespace SodigCiudadano.Controllers
         public async Task<ActionResult> Index()
         {
             DialogoResponse obj = new DialogoResponse();
+
             try
             {
                 string token = Session["access_token"].ToString();
                 int idUsuario = Convert.ToInt32(Session["idUsuario"].ToString());
                 string identificacion = Session["Identificacion"].ToString();
-              //  NumeroIntentosResponse intentos = await authDao.ObtenerNumeroIntentosPorIdUsuario(idUsuario, identificacion, token);
+                //  NumeroIntentosResponse intentos = await authDao.ObtenerNumeroIntentosPorIdUsuario(idUsuario, identificacion, token);
                 ViewBag.primerNombre = "";
                 ViewBag.segndoNombre = "";
                 ViewBag.primerApellido = "";
@@ -41,95 +42,96 @@ namespace SodigCiudadano.Controllers
                 ViewBag.identificacion = identificacion;
                 //if (intentos.estado)
                 //{
-                    //if (intentos.obj.numeroIntentos >= Convert.ToInt32(ConfigurationManager.AppSettings["numeroIntentosPermitidos"].ToString()))
-                    //{
-                    //    Request.Flash("danger", "Ha superado el número máximo de intentos. Por favor, agende una cita");
-                    //    return RedirectToAction("Index", "Ticket");
-                    //}
-                    //else
-                    //{
-                        obj = await dialogoDAO.ObtenerDialogo(token);
-                        if (!obj.estado)
-                            Request.Flash("danger", obj.mensaje);
-                        else
+                //if (intentos.obj.numeroIntentos >= Convert.ToInt32(ConfigurationManager.AppSettings["numeroIntentosPermitidos"].ToString()))
+                //{
+                //    Request.Flash("danger", "Ha superado el número máximo de intentos. Por favor, agende una cita");
+                //    return RedirectToAction("Index", "Ticket");
+                //}
+                //else
+                //{
+                obj = await dialogoDAO.ObtenerDialogo(token);
+                if (!obj.estado)
+                    Request.Flash("danger", obj.mensaje);
+                else
+                {
+                    //InformacionResponse responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+                    InformacionResponse responseDatosDemograficos = (InformacionResponse)Session["responseDatosDemograficos"];
+                    if (responseDatosDemograficos.estado)
+                    {
+                        if (responseDatosDemograficos.obj.Count > 0)
+                        {
+                            foreach (var item in responseDatosDemograficos.obj)
                             {
-                                InformacionResponse responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
-                            if (responseDatosDemograficos.estado)
-                            {
-                                if (responseDatosDemograficos.obj.Count > 0)
+                                if (item.Nombre.Trim() == "domicilio")
                                 {
-                                foreach (var item in responseDatosDemograficos.obj)
-                                {
-                                    if (item.Nombre.Trim() == "domicilio")
+                                    string[] domicilio = item.Valor.Split('/');
+                                    if (domicilio.Length > 2)
                                     {
-                                        string[] domicilio = item.Valor.Split('/');
-                                        if (domicilio.Length > 2)
-                                        {
-                                            Session["direccion"] = domicilio[0];
-                                            Session["sector"] = domicilio[1];
-                                        }
-                                        else
-                                        {
-                                            Session["direccion"] = "";
-                                            Session["sector"] = "";
-                                        }
+                                        Session["direccion"] = domicilio[0];
+                                        Session["sector"] = domicilio[1];
+                                    }
+                                    else
+                                    {
+                                        Session["direccion"] = "";
+                                        Session["sector"] = "";
+                                    }
+                                }
+
+                                if (item.Nombre.Trim() == "nombre".Trim())
+                                {
+                                    Session["nombreDinardap"] = item.Valor;
+                                    string nombre = item.Valor;
+                                    NombreApellido objNombres = new NombreApellido();
+                                    var nombres = objNombres.GetNombreApellido(nombre);
+                                    Session["primerApellido"] = "...";
+                                    Session["segundoApellido"] = "...";
+                                    Session["primerNombre"] = "...";
+
+                                    int numeroNombre = 0;
+                                    Session["segundoNombre"] = "";
+
+                                    if (!string.IsNullOrEmpty(nombres.primerApellido))
+                                    {
+                                        Session["primerApellido"] = nombres.primerApellido;
+                                        numeroNombre += 1;
                                     }
 
-                                    if (item.Nombre.Trim() == "nombre".Trim())
+
+                                    if (!string.IsNullOrEmpty(nombres.segundoApellido))
                                     {
-                                        Session["nombreDinardap"] = item.Valor;
-                                        string nombre = item.Valor;
-                                        NombreApellido objNombres = new NombreApellido();
-                                        var nombres = objNombres.GetNombreApellido(nombre);
-                                        Session["primerApellido"] = "...";
-                                        Session["segundoApellido"] = "...";
-                                        Session["primerNombre"] = "...";
-
-                                        int numeroNombre = 0;
-                                        Session["segundoNombre"] = "";
-
-                                        if (!string.IsNullOrEmpty(nombres.primerApellido))
-                                        {
-                                            Session["primerApellido"] = nombres.primerApellido;
-                                            numeroNombre += 1;
-                                        }
+                                        Session["segundoApellido"] = nombres.segundoApellido;
+                                        numeroNombre += 1;
+                                    }
 
 
-                                        if (!string.IsNullOrEmpty(nombres.segundoApellido))
-                                        {
-                                            Session["segundoApellido"] = nombres.segundoApellido;
-                                            numeroNombre += 1;
-                                        }
-
-
-                                        if (!string.IsNullOrEmpty(nombres.primerNombre))
-                                        {
-                                            Session["primerNombre"] = nombres.primerNombre;
-                                            numeroNombre += 1;
-                                        }
+                                    if (!string.IsNullOrEmpty(nombres.primerNombre))
+                                    {
+                                        Session["primerNombre"] = nombres.primerNombre;
+                                        numeroNombre += 1;
+                                    }
 
 
 
-                                        if (!string.IsNullOrEmpty(nombres.segundoNombre))
+                                    if (!string.IsNullOrEmpty(nombres.segundoNombre))
                                     {
                                         Session["segundoNombre"] = nombres.segundoNombre;
                                         numeroNombre += 1;
                                     }
                                     Session["numeroNombres"] = numeroNombre;
 
-                                        ViewBag.primerNombre = nombres.primerNombre;
-                                        ViewBag.segndoNombre = nombres.segundoNombre;
-                                        ViewBag.primerApellido = nombres.primerApellido; ;
-                                        ViewBag.segundoApellido = nombres.segundoApellido;
-                                    }
+                                    ViewBag.primerNombre = nombres.primerNombre;
+                                    ViewBag.segndoNombre = nombres.segundoNombre;
+                                    ViewBag.primerApellido = nombres.primerApellido; ;
+                                    ViewBag.segundoApellido = nombres.segundoApellido;
                                 }
-                        }
-                                else Request.Flash("danger", "Ha existido un error. Por favor, inténtelo más tarde. No ha sido posible obtener los datos demográficos del CNE.");
                             }
-                            else Request.Flash("danger", responseDatosDemograficos.mensajes);
-                        
                         }
-                    //}
+                        else Request.Flash("danger", "Ha existido un error. Por favor, inténtelo más tarde. No ha sido posible obtener los datos demográficos del CNE.");
+                    }
+                    else Request.Flash("danger", responseDatosDemograficos.mensajes);
+
+                }
+                //}
                 //}
                 //else
                 //    Request.Flash("danger", "Ha ocurrido un error al momento de recuperar el número de intentos " + intentos.mensajes);
@@ -281,7 +283,7 @@ namespace SodigCiudadano.Controllers
                                                 }
                                                 else
                                                 {
-                                                  //  ApiResponse actualizarIntentos = await authDao.ActualizarNumeroIntentos(objUsr, token);
+                                                    //  ApiResponse actualizarIntentos = await authDao.ActualizarNumeroIntentos(objUsr, token);
                                                     mensaje = "No ha superado la validación biométrica por el siguiente motivo: \n" + info.obj.mensaje;
                                                 }
                                             }

@@ -1,6 +1,6 @@
 ﻿
 const init = () => {
-    let blobVideo; 
+    let blobVideo;
     const tieneSoporteUserMedia = () =>
         !!(navigator.mediaDevices.getUserMedia)
 
@@ -8,21 +8,21 @@ const init = () => {
         mensajes(true, "Tu navegador web no cumple los requisitos; por favor, actualiza a un navegador como Firefox o Google Chrome")
         return;
     }
-       
+
 
     const $dispositivosDeAudio = document.querySelector("#dispositivosDeAudio"),
         $dispositivosDeVideo = document.querySelector("#dispositivosDeVideo"),
         $duracion = document.querySelector("#duracion"),
         $video = document.querySelector("#video"),
         $btnComenzarGrabacion = document.querySelector("#btnComenzarGrabacion"),
-        $btnDetenerGrabacion = document.querySelector("#btnDetenerGrabacion"),  
-       $btnContinuar = document.querySelector("#btnContinuar");    
-        var tagVideo = document.querySelector("#videoGrabado");
-        var tagsource = document.querySelector('#source');
-        var panelVideoGrabado = document.querySelector('#panelVideoGrabado');
-        var canvas = document.querySelector('.js-canvas')
-        var videoCorrecto = true;    
-        var existeRostro = false;
+        $btnDetenerGrabacion = document.querySelector("#btnDetenerGrabacion"),
+        $btnContinuar = document.querySelector("#btnContinuar");
+    var tagVideo = document.querySelector("#videoGrabado");
+    var tagsource = document.querySelector('#source');
+    var panelVideoGrabado = document.querySelector('#panelVideoGrabado');
+    var canvas = document.querySelector('.js-canvas')
+    var videoCorrecto = true;
+    var existeRostro = false;
 
     const limpiarSelect = elemento => {
         for (let x = elemento.options.length - 1; x >= 0; x--) {
@@ -44,7 +44,7 @@ const init = () => {
     };
     // Variables "globales"
     let tiempoInicio, mediaRecorder, idIntervalo;
-    const refrescar = async () => { 
+    const refrescar = async () => {
         $duracion.textContent = segundosATiempo((Date.now() - tiempoInicio) / 1000);
         if ($duracion.textContent === '00:00:50') {
             detenerGrabacion();
@@ -54,7 +54,7 @@ const init = () => {
         } else {
             videoCorrecto = true;
         }
-        
+
         if ($duracion.textContent >= '00:00:06') {
             for (var i = 0; i < 1000; i++) {
                 if (i == 400) {
@@ -63,10 +63,10 @@ const init = () => {
                         await capturarCuadroVideo(data);
                     }
                     break;
-                }    
-            }                                
+                }
+            }
         }
-                   
+
     }
 
     // Consulta la lista de dispositivos de entrada de audio y llena el select
@@ -93,22 +93,22 @@ const init = () => {
             })
     };
     // Ayudante para la duración; no ayuda en nada pero muestra algo informativo
-    const comenzarAContar = () => {        
+    const comenzarAContar = () => {
         tiempoInicio = Date.now();
         idIntervalo = setInterval(refrescar, 500);
     };
 
-    async function capturarCuadroVideo(canvas) {        
+    async function capturarCuadroVideo(canvas) {
         let photo = document.querySelector('#photo')
         photo.setAttribute('src', canvas);
-        var imagen = photo.src        
-        await $.post('/SodigCiudadanoZona6/PruebaVida/CapturarCuadroVideo', {
+        var imagen = photo.src
+        await $.post('/PruebaVida/CapturarCuadroVideo', {
             img: imagen
         }, function (data, status) {
-                if (status) {
-                    console.log(data)
+            if (status) {
+                console.log(data)
                 if (data.estado) {
-                    if (data.existeRostro) {                        
+                    if (data.existeRostro) {
                         existeRostro = true;
                     }
                 } else
@@ -124,8 +124,8 @@ const init = () => {
         $('#play').attr('hidden', true);
         $('#btnComenzarGrabacion').attr('hidden', true);
         $('#btnDetenerGrabacion').attr('hidden', false);
-      /*  var title = document.getElementById("title");
-        title.style.display = "none";*/
+        /*  var title = document.getElementById("title");
+          title.style.display = "none";*/
 
         videoCorrecto = true;
         existeRostro = false;
@@ -144,11 +144,11 @@ const init = () => {
                 deviceId: $dispositivosDeAudio.value, // Indicar dispositivo de vídeo
             }
         })
-            .then(stream => {                
+            .then(stream => {
                 // Poner stream en vídeo                
                 const context = canvas.getContext('2d')
                 $video.srcObject = stream;
-                $video.play();               
+                $video.play();
                 var marco = 0;
                 const reDraw = async () => {
                     context.drawImage($video, 0, 0, 320, 250)
@@ -182,14 +182,14 @@ const init = () => {
                     detenerConteo();
                     // Convertir los fragmentos a un objeto binario
                     blobVideo = new Blob(fragmentosDeAudio, { type: 'video/webm' });
-                    
+
                     tagsource.setAttribute('type', 'video/webm');
                     tagVideo.src = URL.createObjectURL(blobVideo);
                     tagVideo.appendChild(tagsource);
                     $video.hidden = true;
                     panelVideoGrabado.hidden = false;
-                    tagVideo.setAttribute('controls', 'controls');  
-                                        
+                    tagVideo.setAttribute('controls', 'controls');
+
                     // subirVideo(blobVideo);
                 });
 
@@ -223,14 +223,14 @@ const init = () => {
         if (!existeRostro) {
             mensajes(false, "No se ha detectado un rostro en el video de prueba de vida, esto se puede deber a que tiene la cámara apagada,la persona está muy alejada a la cámara, la posición del rostro no está centrado a la cámara, el video es de baja calidad o la iluminación no es la adecuado. Por favor, grabe nuevamente su prueba de vida.");
             return false;
-        } 
-	$('#btnContinuar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
+        }
+        $('#btnContinuar').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
         let photo = document.querySelector('#photo')
         var imagen = photo.src
         const formData = new FormData();
         formData.append('video', blobVideo);
         formData.append('frame', imagen);
-        const rutaServidor = '/SodigCiudadanoZona6/PruebaVida/SubirVideo'
+        const rutaServidor = '/PruebaVida/SubirVideo'
         event.preventDefault();
         fetch(rutaServidor, {
             method: 'POST',
@@ -239,10 +239,10 @@ const init = () => {
             .then(data => {
                 if (data.estado) {
                     //window.location.href = "/PruebaVida/SubirImagen";
-                   var  divPruebaVida = document.getElementById("div-PruebaVida");
+                    var divPruebaVida = document.getElementById("div-PruebaVida");
                     divPruebaVida.style.display = 'none';
 
-                   var  divCaptPhoto = document.getElementById("flotanteCaptPhoto");
+                    var divCaptPhoto = document.getElementById("flotanteCaptPhoto");
                     divCaptPhoto.style.display = 'block';
 
                 } else {

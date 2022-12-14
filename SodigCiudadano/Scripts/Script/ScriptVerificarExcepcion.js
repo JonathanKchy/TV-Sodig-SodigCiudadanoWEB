@@ -38,16 +38,16 @@ function abrirModal() {
 }
 
 async function tipoElector(idTipoElector) {
-    await $.post('/SodigCiudadanoZona6/VerificarExcepcion/Index', {
+    await $.post('/VerificarExcepcion/Index', {
         idTipoElector: idTipoElector
     }, async function (response) {
         console.log(response);
         if (response.status) {
             if (response.response.Success) {
-                $.post('/SodigCiudadanoZona6/Auth/GenerarOtp', {
+                $.post('/Auth/GenerarOtp', {
                 }, async function (response) {
                     if (response.status) {
-                        window.location.replace('/SodigCiudadanoZona6/VerificacionOtp');
+                        window.location.replace('/VerificacionOtp');
                     }
                 })
             }

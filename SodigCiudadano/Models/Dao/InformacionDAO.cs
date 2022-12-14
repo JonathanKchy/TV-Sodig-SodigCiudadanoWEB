@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -19,6 +20,7 @@ namespace SodigCiudadano.Models.Dao
 
         public async Task<InformacionResponse> ObtenerImagen(string identificacion, string token)
         {
+            int contador = 0;
             InformacionResponse response = new InformacionResponse();
             using (HttpClient client = new HttpClient())
             {
@@ -27,18 +29,36 @@ namespace SodigCiudadano.Models.Dao
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(scheme: "Bearer", parameter: token);
                 string url = "api/Informacion/ObtenerImagen?identificacion="+identificacion;
-                HttpResponseMessage respuesta = client.GetAsync(url).Result;
 
-                if (respuesta.StatusCode == HttpStatusCode.OK || respuesta.StatusCode == HttpStatusCode.InternalServerError || respuesta.StatusCode == HttpStatusCode.NotFound)
+                HttpResponseMessage respuesta;
+
+                do
                 {
+                    if (contador != 0)
+                    {
+                        Thread.Sleep(3000);
+                    }
+                    respuesta = client.GetAsync(url).Result;
                     var res = await respuesta.Content.ReadAsStringAsync();
                     response = JsonConvert.DeserializeObject<InformacionResponse>(res);
-                }
-                else
-                {
-                    response.estado = false;
-                    response.mensajes = "No ha sido posible conectarse al servidor";
-                }
+                    //aumento contador
+                    contador += 1;
+
+                } while (respuesta.StatusCode != HttpStatusCode.OK && contador < 13);
+                
+
+                //if (respuesta.StatusCode == HttpStatusCode.OK || respuesta.StatusCode == HttpStatusCode.InternalServerError || respuesta.StatusCode == HttpStatusCode.NotFound)
+                //{
+                //    var res = await respuesta.Content.ReadAsStringAsync();
+                //    response = JsonConvert.DeserializeObject<InformacionResponse>(res);
+                //}
+                //else
+                //{
+                //    response.estado = false;
+                //    response.mensajes = "No ha sido posible conectarse al servidor";
+                //}
+
+
             }
             return response;
         }
@@ -115,26 +135,47 @@ namespace SodigCiudadano.Models.Dao
 
         public async Task<InformacionResponse> ObtenerInformacionDatosDemograficos(string identificacion, string token)
         {
+            int contador = 0;
             InformacionResponse response = new InformacionResponse();
             using (HttpClient client = new HttpClient())
             {
+                //solicitud dinardap
                 client.BaseAddress = new Uri(UrlBase);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(scheme: "Bearer", parameter: token);
                 string url = "api/Informacion/ObtenerInformacionDatosDemograficos?identificacion=" + identificacion;
-                HttpResponseMessage respuesta = client.GetAsync(url).Result;
+                HttpResponseMessage respuesta;
+                do
+                {
+                     respuesta = client.GetAsync(url).Result;
 
-                if (respuesta.StatusCode == HttpStatusCode.OK || respuesta.StatusCode == HttpStatusCode.InternalServerError || respuesta.StatusCode == HttpStatusCode.NotFound)
-                {
-                    var res = await respuesta.Content.ReadAsStringAsync();
-                    response = JsonConvert.DeserializeObject<InformacionResponse>(res);
-                }
-                else
-                {
-                    response.estado = false;
-                    response.mensajes = "No ha sido posible conectarse al servidor";
-                }
+                    //if (respuesta.StatusCode == HttpStatusCode.OK )//|| respuesta.StatusCode == HttpStatusCode.InternalServerError || respuesta.StatusCode == HttpStatusCode.NotFound)
+                    //{
+                    //    var res = await respuesta.Content.ReadAsStringAsync();
+                    //    response = JsonConvert.DeserializeObject<InformacionResponse>(res);
+                    //}
+                    //else
+                    //{
+                    //    response.estado = false;
+                    //    response.mensajes = "No ha sido posible conectarse al servidor";
+                    //}
+
+
+
+                    //temporizados de 3 segundos
+                    if (contador != 0)
+                    {
+                        Thread.Sleep(3000);
+                    }
+                    
+                    //responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+
+                        var res = await respuesta.Content.ReadAsStringAsync();
+                        response = JsonConvert.DeserializeObject<InformacionResponse>(res);
+                    //aumento contador
+                    contador += 1;
+                } while (respuesta.StatusCode != HttpStatusCode.OK && contador < 13);
             }
             return response;
         }

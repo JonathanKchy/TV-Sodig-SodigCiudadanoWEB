@@ -331,7 +331,7 @@
         idTipoPersona.addEventListener("change", actualizar);
 
         function actualizar() {
-            $.get('/SodigCiudadanoZona6/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=' + idTipoPersona.value)
+            $.get('/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=' + idTipoPersona.value)
                 .done(function (response) {
                     let idTipoIdentificacion = document.getElementById('idTipoIdentificacion');
                     idTipoIdentificacion.innerHTML = '';
@@ -350,7 +350,7 @@
         }
 
         function actualizar2() {
-            $.get('/SodigCiudadanoZona6/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=16')
+            $.get('/Home/ObtenerTipoIdentificacionPorIdePersona?idPersona=16')
                 .done(function (response) {
                     let idTipoIdentificacion = document.getElementById('idTipoIdentificacion');
                     idTipoIdentificacion.innerHTML = '';

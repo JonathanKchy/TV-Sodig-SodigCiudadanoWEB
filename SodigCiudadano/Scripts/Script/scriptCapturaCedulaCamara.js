@@ -232,13 +232,13 @@ async function analizarImagen() {
     let photo = document.querySelector('#photo')
     var imagen = photo.src
     $('#btn-one1').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
-    await $.post('/SodigCiudadanoZona6/CapturaDocumento/CapturaCedulaFrontalCamara', {
+    await $.post('/CapturaDocumento/CapturaCedulaFrontalCamara', {
         img: imagen
     }, function (data, status) {
             if (status) {
                 if (data.estado) {
                     if (data.redirigir) {
-                        window.location.replace('/SodigCiudadanoZona6/Home/Index?msg1=' + data.mensaje)
+                        window.location.replace('/Home/Index?msg1=' + data.mensaje)
                     }
                     else {
                         divFront = document.getElementById("CaptureFrontal")
@@ -267,7 +267,7 @@ async function analizarImagen() {
                
                 } else {
                     if (data.ticket) {
-                        window.location.replace('/SodigCiudadanoZona6/Ticket/Index?msg=1');
+                        window.location.replace('/Ticket/Index?msg=1');
                     }
                     else {
                         $('#btn-one1').html('<span role="status" aria-hidden="true"></span>Continuar').attr('disabled', false);
@@ -297,7 +297,7 @@ async function analizarImagenPosterior() {
     let photo = document.querySelector('#photo2')
     var imagen = photo.src
     $('#btn-one2').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
-    await $.post('/SodigCiudadanoZona6/CapturaDocumento/CapturaCedulaPosteriorCamara', {
+    await $.post('/CapturaDocumento/CapturaCedulaPosteriorCamara', {
         img: imagen
     }, function (data, status) {
         if (status) {
@@ -306,12 +306,12 @@ async function analizarImagenPosterior() {
                 if (idTipoElector.toString() == data.codigoTipoElectorVotante.toString()) {
                     var esEcuatoriano = data.esEcuatoriano;
                     if (esEcuatoriano)
-                        window.location.replace('/SodigCiudadanoZona6/VerificarExcepcion/verfificarCodigoDactilar')
+                        window.location.replace('/VerificarExcepcion/verfificarCodigoDactilar')
                     else
-                        window.location.replace('/SodigCiudadanoZona6/IdentificacionSolicitante/Index')
+                        window.location.replace('/IdentificacionSolicitante/Index')
                 }
 		        else
-                    window.location.replace('/SodigCiudadanoZona6/VerificarExcepcion/verfificarCodigoDactilar')
+                    window.location.replace('/VerificarExcepcion/verfificarCodigoDactilar')
             } else {
                 $('#btn-one2').html('<span role="status" aria-hidden="true"></span>Continuar').attr('disabled', false);
                 mensajes(false, data.mensaje);
@@ -329,7 +329,7 @@ async function analizarPasaporte() {
     let photo = document.querySelector('#photo')
     var imagen = photo.src
     $('#btn-one').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
-    await $.post('/SodigCiudadanoZona6/CapturaDocumento/CapturaPasaporteCamara', {
+    await $.post('/CapturaDocumento/CapturaPasaporteCamara', {
         img: imagen
     }, function (data, status) {
         if (status) {
@@ -338,12 +338,12 @@ async function analizarPasaporte() {
                 if (idTipoElector.toString() == data.codigoTipoElectorVotante.toString()) {
                     var esEcuatoriano = data.esEcuatoriano;
                     if (esEcuatoriano)
-                        window.location.replace('/SodigCiudadanoZona6/VerificarExcepcion/SeleccionTipoCargaPapeleta')
+                        window.location.replace('/VerificarExcepcion/SeleccionTipoCargaPapeleta')
                     else
-                        window.location.replace('/SodigCiudadanoZona6/IdentificacionSolicitante/Index')
+                        window.location.replace('/IdentificacionSolicitante/Index')
                 }
                 else
-                    window.location.replace('/SodigCiudadanoZona6/IdentificacionSolicitante/Index')
+                    window.location.replace('/IdentificacionSolicitante/Index')
             } else
                 mensajes(false, data.mensaje);
         } else {
@@ -424,12 +424,12 @@ async function analizarPapeleta() {
     let photo = document.querySelector('#photo')
     var imagen = photo.src
     $('#btn-one3').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>').attr('disabled', true);
-    await $.post('/SodigCiudadanoZona6/VerificarExcepcion/CapturaPapeletaCamara', {
+    await $.post('/VerificarExcepcion/CapturaPapeletaCamara', {
         img: imagen
     }, function (data, status) {
         if (status) {
             if (data.estado) {
-                window.location.replace('/SodigCiudadanoZona6/IdentificacionSolicitante/Index')
+                window.location.replace('/IdentificacionSolicitante/Index')
             } else
                 mensajes(false, data.mensaje);
         } else {

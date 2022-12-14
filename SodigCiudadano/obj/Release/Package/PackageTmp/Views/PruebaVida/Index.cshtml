@@ -88,7 +88,7 @@
                 </a>
             </li>
         </ul>
-        
+
         <div class="pt-5" id="div-PruebaVida">
             <div class="row">
                 <div class="col-md-3 pl-5 pr-5">
@@ -255,25 +255,25 @@
 
     </div>
 
-   
-<div id="myModal" data-backdrop="static" class="modal fade">
-    <div class="modal-dialog modal-confirm">
-        <div class="modal-content">
-            <div class="modal-header flex-column">
-                <div class="icon-box">
-                    <i class="material-icons">&#xE5CD;</i>
+
+    <div id="myModal" data-backdrop="static" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE5CD;</i>
+                    </div>
+                    <h4 class="modal-title w-100">Registro de Biometría Rechazado</h4>
                 </div>
-                <h4 class="modal-title w-100">Registro de Biometría Rechazado</h4>
-            </div>
-            <div class="modal-body">
-                <p id="textoRechazado">Los documentos capturados no coinciden con los registros oficiales.</p>
-            </div>
-            <div class="modal-footer justify-content-center">
-                <button type="button" onclick="onClickRechazar()" class="btn btn-danger">Aceptar</button>
+                <div class="modal-body">
+                    <p id="textoRechazado">Los documentos capturados no coinciden con los registros oficiales.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" onclick="onClickRechazar()" class="btn btn-danger">Aceptar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     @section Scripts {
         <script type="module" src="~/Scripts/Script/ScriptVideo.js"></script>
@@ -293,7 +293,7 @@
                 var day = ("0" + now.getDate()).slice(-2);
                 var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
-                var today = (day) + "-" + (month) + "-" + now.getFullYear();                  
+                var today = (day) + "-" + (month) + "-" + now.getFullYear();
                 $("#fecha").val(today);
             });
         </script>
@@ -321,7 +321,7 @@
                     const perfil2 = document.getElementById('perfil2');
                     perfil2.hidden = true;
                     const capture2 = document.getElementById('capture1');
-                    capture2.hidden =false;
+                    capture2.hidden = false;
                     const panelVideoCapt = document.getElementById('panelVideoCapt');
                     panelVideoCapt.hidden = false;
                     const panelCapturaCapt = document.getElementById('panelCapturaCapt');
@@ -376,7 +376,7 @@
                 const capture2 = document.getElementById('capture1');
                 capture2.hidden = true;
                 const recom2 = document.getElementById('perfil2');
-               recom2.hidden = false;
+                recom2.hidden = false;
 
                 const panelVideoCapt = document.getElementById('panelVideoCapt');
                 panelVideoCapt.hidden = true;
@@ -402,14 +402,14 @@
                             esEcuatoriano = data.esEcuatoriano;
                             $("#success_tic").modal("show");
                         } else {
-                      
+
                             if (!data.resultadoVerificacion) {
                                 $("#myModal").modal("show");
                                 var textoRechazado = document.getElementById('textoRechazado');
                                 textoRechazado.innerText = data.mensaje;
                             }
                             else {
-                               
+
                                 $('#btn-oneImagen').html('<span role="status" aria-hidden="true"></span>Continuar').attr('disabled', false);
                                 let mensajeAlerta = document.querySelector('#mensajeAlerta1');
                                 mensajeAlerta.hidden = false;

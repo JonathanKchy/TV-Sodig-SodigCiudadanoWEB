@@ -9,9 +9,11 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace SodigCiudadano.Controllers
 {
@@ -370,7 +372,23 @@ namespace SodigCiudadano.Controllers
                 string identificacion = Session["numeroIdentificacion"].ToString().Trim();
                 string token = Session["access_token"].ToString();
                 string codigoDactilarDinardap = "";
+                //int contador = 0;
+                //InformacionResponse responseDatosDemograficos;
+                ////primera validación a DINARDAP (Se da despues de ingresar el código Dactilar)
+                //do {
+
+                //    //temporizados de 3 segundos
+                //    Thread.Sleep(3000);
+                //    responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+
+                //    //aumento contador
+                //    contador += 1;
+                //} while (responseDatosDemograficos.estado == true || contador<13);
+
                 InformacionResponse responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+                Session["responseDatosDemograficos"] = responseDatosDemograficos;
+                //InformacionResponse responseDatosDemograficos = (InformacionResponse)Session["responseDatosDemograficos"];
+
                 if (responseDatosDemograficos.estado)
                 {
                     if (responseDatosDemograficos.obj.Count > 0)
@@ -458,7 +476,7 @@ namespace SodigCiudadano.Controllers
                     else Request.Flash("danger", "Ha existido un error. Por favor, inténtelo más tarde o puede solicitar ayuda en el chatbot.");
                 }
 
-
+                //valida que el código dactilar ingresado sea igual al devuelto por DINARDAP
                 if (existeCodigoDactilar)
                 {
                     if (codigoDactilarDinardap.ToUpper() == codigoDactilar.ToUpper())

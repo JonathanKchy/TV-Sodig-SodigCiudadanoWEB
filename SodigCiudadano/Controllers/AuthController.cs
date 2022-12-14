@@ -19,6 +19,7 @@ namespace SodigCiudadano.Controllers
         private CatalogoDAO objCatalogoDao = new CatalogoDAO();
         private TicketDAO objTickeDao = new TicketDAO();
         private AuthDAO authDao = new AuthDAO();
+        private InformacionDAO objInformacionDAO = new InformacionDAO();
         // Auth
         public ActionResult Login()
         {
@@ -29,6 +30,7 @@ namespace SodigCiudadano.Controllers
         public async Task<ActionResult> Login(FormCollection formulario)
         {
             Captcha objCaptcha;
+            string token = string.Empty;
             try
             {
                 Session["tienePagoPendiente"] = false;
@@ -71,7 +73,7 @@ namespace SodigCiudadano.Controllers
                     Session["Identificacion"] = (string)respuesta.obj.Identificacion;
                     Session["correoCliente"] = (string)respuesta.obj.correo;
                     Session["access_token"] = (string)respuesta.obj.access_token;
-
+                    token = (string)respuesta.obj.access_token;
 
                     NumeroIntentosResponse intentos = await authDao.ObtenerNumeroIntentosPorIdUsuario(Convert.ToInt32(Session["idUsuario"].ToString()), identificacion, Session["access_token"].ToString());
 
@@ -98,11 +100,16 @@ namespace SodigCiudadano.Controllers
                                     Session["correoUsuarioTemp"] = obj.correoUsuario;
                                     Session["IdentificacionTemp"] = (string)respuesta.obj.Identificacion;
                                     Session.Contents.Remove("Identificacion");
+                                    //Llamada Dinardap paquete 3404
+                                    //InformacionResponse responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+                                    //Session["responseDatosDemograficos"] = responseDatosDemograficos;
+
                                     CodigoOTPResponse objCodigoResponse = await objDao.crearCodigoOtp(obj, (string)respuesta.obj.access_token);
                                     if (objCodigoResponse.estado)
                                         return RedirectToAction("verificacionCodigo", "Auth", new { identificador = "1" });
                                     else
                                         Request.Flash("danger", objCodigoResponse.mensaje);
+
                                 }
                                 else
                                 {
@@ -113,6 +120,10 @@ namespace SodigCiudadano.Controllers
                                     Session["correoUsuarioTemp"] = correo;
                                     Session["IdentificacionTemp"] = (string)respuesta.obj.Identificacion;
                                     Session.Contents.Remove("Identificacion");
+                                    //Llamada Dinardap paquete 3404
+                                    InformacionResponse responseDatosDemograficos = await objInformacionDAO.ObtenerInformacionDatosDemograficos(identificacion, token);
+                                    Session["responseDatosDemograficos"] = responseDatosDemograficos;
+
                                     CodigoOTPResponse objCodigoResponse = await objDao.crearCodigoOtp(obj, (string)respuesta.obj.access_token);
                                     if (objCodigoResponse.estado)
                                         return RedirectToAction("verificacionCodigo", "Auth", new { identificador = "3" });
