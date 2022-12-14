@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- NProgress -->
+
     <link href="~/Vendors/nprogress/nprogress.css" rel="stylesheet" />
 
     <link href="~/Vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
@@ -27,125 +28,164 @@
     <link href="~/Vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
 
     <!-- Custom Theme Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;1,100;1,400&family=Outfit:wght@200;400&display=swap" rel="stylesheet">
 
-    <link href="~/Content/css/custom.min.css" rel="stylesheet" />
-    <link href="~/Content/css/EstilosLogin.css" rel="stylesheet" />
-    <link href="~/Content/assets/css/Estilos/EstilosModal.css" rel="stylesheet" />
-    <link href="~/Content/css/Responsive.css" rel="stylesheet" />
+    
+   <link href="~/Content/assets/css/Estilos/EstilosModal.css" rel="stylesheet" />
+    
+    <link href="~/Content/css/Andres.css" rel="stylesheet" />
+
     <!--Script -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../../Content/js/main.js"></script>
-    
+
 
 </head>
-<body class="fondoLogin">
+<body >
     <header>
-        <ul class="nav">
-            <li>
-                <a href="#">
-                    Inicio
-                </a>
-            </li>
-            <li>
-                <a href="/Menu/Ayuda">
-                    Ayuda
-                </a>
-            </li>
-            <!--<li>
-                <a href="/Menu/Blog">
-                    Blog
-                </a>
-            </li>-->
-        </ul>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#">|||</a>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="/Menu/Ayuda">Ayuda</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
     </header>
     <div id="logohome">
-        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/TuFirmaEc.png" width="80px" style="margin-left:4%" /></a> &nbsp; &nbsp;
-        <a href="https://sodigsa.com/" target="_blank"><img src="~/Content/images/logobce.png" width="150px" /></a>
         <!--<h1>BIENVENIDO </h1>-->
-
         <div class="msm">@Html.Partial("~/Views/Shared/_Flash.cshtml")</div>
     </div>
-    <div>
-        <div class="col-md-6 offset-sm-2 pt-5 mt-5">
-            <label style="color:black; font-size:16px; font:bold"></label>
-        </div>
+ 
+                <section class="foto">
+                    <section class="miniFotos">
+                        <img src="~/Content/images/Recurso 2Sodignature logo.png" alt="">
+                        <img src="~/Content/images/logobce.png" alt="">
+                    </section>
+                    <h2>Bienvenido</h2>
+                    <h3>¡Obtener tu firma electrónica nunca ha sido tan fácil!</h3>
+                    <section class="secForm">
+                        <section id="el-formulario">
+                            @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { onsubmit = "return validar()" }))
+                            {
 
-        <div class="col-md-6 offset-sm-2 pt-2 pl-4">
-            <label style="color:black; font-size:16px; "></label><br />
-            <label style="color:black; font-size:16px"></label>
-        </div>
+                                <!--cédula-->
+                                <div class="grupo_input">
+                                    <div class="div1">
+                                        <input oninput="validateInput()" type="text" minlength="10" id="identificacion" maxlength="10" name="identificacion" autocomplete="off" class="input_item" placeholder=" " />
 
-        <div class="login_wrapper">
-            <div class="animate  loin_form">
+                                        <label for="identificacion" class="label_item">
+                                            Identificación (mínimo 10 dígitos)
+                                            <span class="label_visto">&#9745</span>
+                                        </label>
+                                    </div>
 
-                <section class="logi_content">
-                    <h2>¡BIENVENIDO!  </h2>
-                    <h3>Para iniciar su proceso ingrese sus datos.</h3>
-                    @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { onsubmit = "return validar()" }))
-                    {
+                                    <div id="pruebe" class="div2">
 
-                        <div>
-                            <input type="text" id="identificacion" maxlength="15" name="identificacion" autocomplete="off" class="form-control" style="color:black" placeholder="Identificación" />
-                            <div class="text-danger" style="text-align:left">
-                                <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="correo" autocomplete="off" class="form-control" style="color:black" placeholder="Correo electrónico" />
-                            <span class="message success">Correo electrónico válido!</span>
-                            <span class="message error">Correo electrónico inválido!</span>
-                            <div class="text-danger" style="text-align:left">
-                                <label hidden id="mensajeCorreo"></label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="email" id="email2" name="email2" autocomplete="off" class="form-control" style="color:black" placeholder="Confirmar correo electrónico" onkeyup="habilitar()" />
-                            <div class="text-danger" style="text-align:left">
-                                <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="g-recaptcha col-md-12" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
-                        </div>
-                        <div class="text-danger" style="text-align:center">
-                            <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
-                        </div>
-                        <div class="col-md-12 pt-2 mt-1">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
-                                </label>
-                            </div>
-                        </div>
-                        <div class="text-danger" style="text-align:center">
-                            <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
-                        </div>
-                        <div>
-                            <br />
-                            <div class="col-md-12" style="margin-top:5%;">
-                                <button type="submit" id="btn-one" class="boton btn  btn-block">Iniciar Sesión</button>
-                            </div>
-                        </div>
+                                    </div>
+                                    <!--servietsoft-->
+                                    <div class="text-danger" style="text-align:left">
+                                        <label hidden id="mensajeIdentificacion"> * Ingrese el número de identificación</label>
+                                        <label hidden id="mensajeIdentificacionCaracteres"> * La identificación debe tener 10 caracteres</label>
+                                    </div>
+                                </div>
+
+                                <!--correo-->
+                                <div class="grupo_input">
+                                    <div class="div1">
+                                        <input type="email" id="email" name="correo" autocomplete="off" class="input_item" placeholder=" " required="" />
+
+                                        <label for="email" class="label_item">
+                                            Ingrese su correo electrónico personal
+                                            <span class="label_visto">&#9745</span>
+                                        </label>
+                                    </div>
+
+                                    <div id="pruebe" class="div2">
+
+                                    </div>
+
+                                </div>
+
+                                <span class="message success">Correo electrónico válido!</span>
+                                <span class="message error">Correo electrónico inválido!</span>
+                                <div class="text-danger" style="text-align:left">
+                                    <label hidden id="mensajeCorreo"></label>
+                                </div>
 
 
-                    }
+                                <!--correo2-->
+                                <div class="grupo_input">
+                                    <div class="div1">
+                                        <input type="email" id="email2" name="email2" autocomplete="off" class="input_item" placeholder=" " onkeyup="habilitar()" />
 
+                                        <label for="email2" class="label_item">
+                                            Confirmar correo electrónico
+                                            <span class="label_visto">&#9745</span>
+                                        </label>
+                                    </div>
+
+                                    <div id="pruebe" class="div2">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="text-danger" style="text-align:left">
+                                    <label hidden id="mensajeEmail">*Los correos electrónicos ingresados no coinciden </label>
+                                </div>
+
+
+                                <!--recaptcha-->
+                                <div>
+                                    <div class="g-recaptcha" data-sitekey="6LcOVgYaAAAAAHmwILyhIYPztGrOndruM8ZUzs0z" style="width:0px"></div>
+                                </div>
+
+                                <div class="text-danger" style="text-align:center">
+                                    <label hidden id="mensajeCaptcha">Por favor, seleccione la casilla</label>
+                                </div>
+                                <!--checkbox-->
+                                <div class="col-md-12 pt-2 mt-1">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="checkTerminos" id="checkTerminos"> Acepto los términos y condiciones
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-danger" style="text-align:center">
+                                    <label id="mensajeTérmino" hidden style="font-size:14px;" class="col-form-label col-md-12 col-sm-12 text-danger  label-align">Para continuar con el proceso, es necesario aceptar los Términos y Condiciones</label>
+                                </div>
+
+
+
+                                <div>
+                                    <br />
+                                    <!-- Cambio 2 Ocultar el boton !-->
+                                    <button type="submit" id="btn-one" class="form__submit">Iniciar Sesión</button>
+
+                                </div>
+
+
+                                <div>
+                                    <p class="informacion_final">
+                                        <font COLOR="#0f6c79">&#9888</font>
+                                        <font COLOR="#707070">Personas extranjeras o jurídicas deben realizar el proceso de forma presencial</font>
+                                    </p>
+                                </div>
+
+
+                            }
+
+                        </section>
+                    </section>
                 </section>
-            </div>
 
-        </div>
 
-        <div class="col-md-6 offset-sm-2 pb-4 mt-5 pt-4  pl-4">
-            <br />
-        </div>
-        <div class="col-md-6 offset-sm-2 pb-5 mt-5 pt-5 mb-5 pl-4">
-            <br />
-        </div>
-        <div class="col-md-6 offset-sm-2 pt-5 mb-5">
-            <a href="~/Content/video/politica.pdf" download="politicas" target="_blank" style="color:blue; font-size:16px; ">Políticas de Seguridad</a><br />
-
-        </div>
-    </div>
   
     <div class="myModal" hidden id="miModal" name="miModal">
         <div class="flex" id="flex">
