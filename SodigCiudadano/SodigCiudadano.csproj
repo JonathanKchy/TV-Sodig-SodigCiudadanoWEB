@@ -3411,6 +3411,8 @@
     <Content Include="Content\images\forward_disabled.png" />
     <Content Include="Content\images\forward_enabled.png" />
     <Content Include="Content\images\forward_enabled_hover.png" />
+    <Content Include="Content\images\fotoDerecha.jpg" />
+    <Content Include="Content\images\fotoIzquierda.jpg" />
     <Content Include="Content\images\loading.gif" />
     <Content Include="Content\images\logobce.png" />
     <Content Include="Content\images\LogoIzquierda.PNG" />
